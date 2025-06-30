@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 1: Desafio do Gamer</title>
+    <link rel="stylesheet" href="../css/semanas.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-button">← Voltar ao Mapa de Missões</a>
+        
+        <div class="weekly-briefing">
+            <h2>Missão da Semana: Ativar seus Superpoderes de <span class="en-word">Food</span>!</h2>
+            <p>Olá, <span class="en-word">Player</span> João Miguel! Bem-vindo ao seu primeiro desafio! Esta semana, vamos praticar como falar sobre <span class="en-word">food</span> e <span class="en-word">drinks</span>. Você vai aprender a dizer o que <span class="en-word">you love</span> e o que <span class="en-word">you hate</span>, e a usar palavras mágicas para criar frases superpoderosas. Prepare-se, a aventura vai começar! <button class="audio-btn" data-audio-src="../assets/audio/semana1_intro_geral.mp3">🔊</button></p>
+        </div>
+
+        <main>
+            <!-- TREINO 1: FRASES AFIRMATIVAS -->
+            <section class="mission-day">
+                <h2>Treino 1: O Poder do "<span class="en-word">I</span> + Ação"</h2>
+                <div class="activity-box">
+                    <p class="prompt">Sua missão: Complete as 10 frases abaixo com a palavra que falta!</p>
+                    <ul class="transform-activity">
+                        <li>I <input type="text" id="s1d1q1" data-answer="eat"> rice and beans.</li>
+                        <li>You <input type="text" id="s1d1q2" data-answer="drink"> orange juice.</li>
+                        <li>I <input type="text" id="s1d1q3" data-answer="love"> chocolate.</li>
+                        <li>You <input type="text" id="s1d1q4" data-answer="like"> videogames.</li>
+                        <li>I <input type="text" id="s1d1q5" data-answer="hate"> spiders.</li>
+                        <li>You <input type="text" id="s1d1q6" data-answer="eat"> bread for breakfast.</li>
+                        <li>I <input type="text" id="s1d1q7" data-answer="want"> a new computer.</li>
+                        <li>You <input type="text" id="s1d1q8" data-answer="have"> a dog.</li>
+                        <li>I <input type="text" id="s1d1q9" data-answer="speak"> Portuguese.</li>
+                        <li>You <input type="text" id="s1d1q10" data-answer="live"> in Brazil.</li>
+                    </ul>
+                    <button id="verify-s1d1" class="check-btn">Verificar Respostas</button>
+                </div>
+            </section>
+
+            <!-- TREINO 2: FRASES NEGATIVAS -->
+            <section class="mission-day">
+                <h2>Treino 2: O Desafio do <span class="en-word">Don't</span>!</h2>
+                <div class="activity-box">
+                    <p class="prompt">Sua missão: Transforme as 10 frases abaixo em negativas. Use seu novo superpoder!</p>
+                    <ul class="transform-activity">
+                        <li><p class="prompt">1. I like vegetables.</p><input type="text" id="s1d3q1" data-answer="i don't like vegetables" data-verb="like"><div class="feedback-message" id="s1d3-feedback1"></div></li>
+                        <li><p class="prompt">2. You eat bread.</p><input type="text" id="s1d3q2" data-answer="you don't eat bread" data-verb="eat"><div class="feedback-message" id="s1d3-feedback2"></div></li>
+                        <li><p class="prompt">3. I drink soda.</p><input type="text" id="s1d3q3" data-answer="i don't drink soda" data-verb="drink"><div class="feedback-message" id="s1d3-feedback3"></div></li>
+                        <li><p class="prompt">4. You love spiders.</p><input type="text" id="s1d3q4" data-answer="you don't love spiders" data-verb="love"><div class="feedback-message" id="s1d3-feedback4"></div></li>
+                        <li><p class="prompt">5. I have a skateboard.</p><input type="text" id="s1d3q5" data-answer="i don't have a skateboard" data-verb="have"><div class="feedback-message" id="s1d3-feedback5"></div></li>
+                        <li><p class="prompt">6. You want an old computer.</p><input type="text" id="s1d3q6" data-answer="you don't want an old computer" data-verb="want"><div class="feedback-message" id="s1d3-feedback6"></div></li>
+                        <li><p class="prompt">7. I eat cookies for lunch.</p><input type="text" id="s1d3q7" data-answer="i don't eat cookies for lunch" data-verb="eat"><div class="feedback-message" id="s1d3-feedback7"></div></li>
+                        <li><p class="prompt">8. You drink milk.</p><input type="text" id="s1d3q8" data-answer="you don't drink milk" data-verb="drink"><div class="feedback-message" id="s1d3-feedback8"></div></li>
+                        <li><p class="prompt">9. I hate math.</p><input type="text" id="s1d3q9" data-answer="i don't hate math" data-verb="hate"><div class="feedback-message" id="s1d3-feedback9"></div></li>
+                        <li><p class="prompt">10. You like my new house.</p><input type="text" id="s1d3q10" data-answer="you don't like my new house" data-verb="like"><div class="feedback-message" id="s1d3-feedback10"></div></li>
+                    </ul>
+                    <button id="verify-s1d3" class="check-btn">Verificar Respostas</button>
+                </div>
+            </section>
+            
+            <!-- TREINO 3: O POWER-UP "A / AN" -->
+            <section class="mission-day">
+                <h2>Treino 3: O Power-Up "<span class="en-word">A / An</span>"</h2>
+                <div class="activity-box">
+                    <p class="prompt">Sua missão: Escolha <span class="en-word">a</span> ou <span class="en-word">an</span> para completar as frases!</p>
+                    <ul class="transform-activity">
+                        <li>I want <input type="text" id="s1d4q1" data-answer="a"> new computer.</li>
+                        <li>You eat <input type="text" id="s1d4q2" data-answer="an"> apple.</li>
+                        <li>I have <input type="text" id="s1d4q3" data-answer="a"> house.</li>
+                        <li>You want <input type="text" id="s1d4q4" data-answer="an"> old book.</li>
+                        <li>I eat <input type="text" id="s1d4q5" data-answer="a"> sandwich for lunch.</li>
+                        <li>You have <input type="text" id="s1d4q6" data-answer="an"> apartment.</li>
+                        <li>This is <input type="text" id="s1d4q7" data-answer="a"> red car.</li>
+                        <li>That is <input type="text" id="s1d4q8" data-answer="an"> egg.</li>
+                        <li>I want <input type="text" id="s1d4q9" data-answer="a"> dog.</li>
+                        <li>You have <input type="text" id="s1d4q10" data-answer="an"> eraser.</li>
+                    </ul>
+                    <button id="verify-s1d4" class="check-btn">Verificar Respostas</button>
+                </div>
+            </section>
+
+            <!-- TREINO 4: A CONEXÃO "BUT" -->
+            <section class="mission-day">
+                <h2>Treino 4: Batalha Final com <span class="en-word">But</span>!</h2>
+                <div class="activity-box">
+                    <p class="prompt">Sua missão final: Complete as frases do Chefão da Gramática para vencer o jogo!</p>
+                    <ul class="transform-activity">
+                        <li>I love chocolate, but I hate <input type="text" id="s1d5q1" data-answer="vegetables">.</li>
+                        <li>You like videogames, but you don't like <input type="text" id="s1d5q2" data-answer="school">.</li>
+                        <li>I eat bread, but I don't eat <input type="text" id="s1d5q3" data-answer="rice">.</li>
+                        <li>You have a dog, but you don't have a <input type="text" id="s1d5q4" data-answer="cat">.</li>
+                        <li>I want a new computer, but I have an <input type="text" id="s1d5q5" data-answer="old"> computer.</li>
+                        <li>You drink milk, but you don't drink <input type="text" id="s1d5q6" data-answer="soda">.</li>
+                        <li>I live in an apartment, but I want a <input type="text" id="s1d5q7" data-answer="house">.</li>
+                        <li>You speak Portuguese, but you don't speak <input type="text" id="s1d5q8" data-answer="japanese">.</li>
+                        <li>I like my teacher, but I don't like <input type="text" id="s1d5q9" data-answer="math">.</li>
+                        <li>You have a red car, but you want a <input type="text" id="s1d5q10" data-answer="blue"> car.</li>
+                    </ul>
+                    <button id="verify-s1d5" class="check-btn">Verificar Respostas</button>
+                </div>
+            </section>
+            
+            <button id="complete-week-btn" data-week="1" class="check-btn">MISSÃO CONCLUÍDA!</button>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Plano de Férias - João Miguel</p>
+        </footer>
+    </div>
+    <script src="../js/atividades.js"></script>
+</body>
+</html>

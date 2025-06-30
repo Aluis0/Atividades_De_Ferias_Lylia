@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aventura de Férias - João Miguel</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>A Aventura de Férias do João Miguel!</h1>
+      <p>
+        Olá, aventureiro! Prepare-se para missões incríveis que vão turbinar o
+        seu inglês. Cada semana é um novo desafio. Vamos começar?
+      </p>
+    </header>
+
+    <main id="mission-board">
+      <!-- Semana 1 -->
+      <div class="mission-card" id="week-1">
+        <div class="mission-status" id="status-1"></div>
+        <div class="mission-icon">🎮</div>
+        <h2>Semana 1</h2>
+        <h3>O Desafio Supremo de Comida do Gamer</h3>
+        <p>
+          Pratique frases afirmativas e negativas sobre comidas, bebidas, gostos
+          e vontades. Use inglês para dizer o que você gosta, não gosta e
+          deseja, aprendendo também a usar "a/an" e "but" para criar frases
+          completas como um verdadeiro gamer!
+        </p>
+        <a href="semanas/semana1.html" class="mission-button"
+          >Começar Missão!</a
+        >
+      </div>
+
+      <!-- Semana 2 -->
+      <div class="mission-card" id="week-2">
+        <div class="mission-status" id="status-2"></div>
+        <div class="mission-icon">✈️</div>
+        <h2>Semana 2</h2>
+        <h3>O Diário do Viajante do Mundo</h3>
+        <p>
+          Aprenda a fazer perguntas em inglês usando "Do you", "What" e "Where".
+          Entreviste personagens, transforme ideias em perguntas e registre suas
+          descobertas no seu diário de bordo!
+        </p>
+        <a
+          href="semanas/semana2.html"
+          class="mission-button disabled"
+          id="btn-week-2"
+          >Começar Missão!</a
+        >
+      </div>
+
+      <!-- Semana 3 -->
+      <div class="mission-card" id="week-3">
+        <div class="mission-status" id="status-3"></div>
+        <div class="mission-icon">🔤</div>
+        <h2>Semana 3</h2>
+        <h3>A Grande Competição do Alfabeto</h3>
+        <p>
+          Monte frases completas, use adjetivos e cores na ordem certa, escolha
+          entre "have" e "want", pratique perguntas e respostas, e decifre
+          palavras soletradas em áudio. Desafios para deixar seu inglês mais
+          rápido e criativo!
+        </p>
+        <a
+          href="semanas/semana3.html"
+          class="mission-button disabled"
+          id="btn-week-3"
+          >Começar Missão!</a
+        >
+      </div>
+
+      <!-- Semana 4 -->
+      <div class="mission-card" id="week-4">
+        <div class="mission-status" id="status-4"></div>
+        <div class="mission-icon">🎨</div>
+        <h2>Semana 4</h2>
+        <h3>Missão Final do Super Agente</h3>
+        <p>
+          Mostre tudo o que aprendeu: leia e interprete textos, traduza usando
+          "like to", monte frases, transcreva áudios e responda perguntas sobre
+          você. Complete todos os desafios e conquiste o título de Mestre do
+          Inglês!
+        </p>
+        <a
+          href="semanas/semana4.html"
+          class="mission-button disabled"
+          id="btn-week-4"
+          >Começar Missão!</a
+        >
+      </div>
+
+      <!-- MISSÃO BÔNUS (Começa escondida) -->
+        <a href="semanas/missao-bonus.html" class="mission-card mission-card-bonus" id="bonus-mission-card" style="display: none;">
+            <div class="mission-icon">🏆</div>
+            <h3>Missão Bônus!</h3>
+            <p class="description">Sua recompensa final te aguarda. Clique para receber seu Certificado de Mestre Aventureiro!</p>
+            <div class="mission-button">Receber Prêmio!</div>
+        </a>
+    </main>
+
+    <footer>
+      <p>Feito para o nosso futuro Mestre do Inglês!</p>
+      <!--
+      <button id="reset-progress-btn" style="margin-top: 1rem">
+        Resetar Progresso
+      </button>
+      -->
+    </footer>
+
+        <div id="unlock-overlay">
+        <div class="unlock-message">
+            <h2>PARABÉNS!</h2>
+            <p>Você completou todas as missões e desbloqueou um desafio final!</p>
+            <button id="unlock-ok-btn">Ver minha recompensa!</button>
+        </div>
+    
+          <!-- MISSÃO BÔNUS (Começa escondida e segue o padrão dos outros cards) -->
+      <div class="mission-card mission-card-bonus" id="bonus-mission-card" style="display: none;">
+          <div class="mission-icon">🏆</div>
+          <h3>Missão Bônus!</h3>
+          <p class="description">Sua recompensa final te aguarda. Clique para receber seu Certificado de Mestre Aventureiro!</p>
+          <a href="semanas/missao-bonus.html" class="mission-button">Receber Prêmio!</a>
+      </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

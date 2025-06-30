@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão Bônus: Sua Graduação!</title>
+    <link rel="stylesheet" href="../css/semanas.css">
+</head>
+<body>
+    <div class="container" style="max-width: 700px;">
+        <div class="weekly-briefing" style="background: linear-gradient(135deg, #FFC700, #FF6F00); border-color: #FFB300;">
+            <h2 style="font-size: 2.5rem;">Parabéns, Mestre Aventureiro! 🏆</h2>
+            <p>Você completou todas as missões! Sua dedicação foi incrível. Agora, para receber seu prêmio final, vamos criar seu Certificado de Honra!</p>
+        </div>
+
+        <main>
+            <section class="mission-day">
+                <h2>Passo 1: Seu Nome no Certificado</h2>
+                <div class="activity-box">
+                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Digite seu nome completo exatamente como você quer que ele apareça no seu troféu.</p>
+                    <input type="text" id="certificate-name" class="input-full" placeholder="Ex: João Miguel da Silva">
+                </div>
+            </section>
+
+            <section class="mission-day">
+                <h2>Passo 2: Escolha seu Título Lendário!</h2>
+                <div class="activity-box">
+                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Cada aventureiro ganha um título especial. Qual será o seu?</p>
+                    <ul id="title-selection-list" class="transform-activity" style="text-align: left;">
+                        <li><label><input type="radio" name="legendary-title" value="Mestre Gamer do Vocabulário"> Mestre Gamer do Vocabulário 🎮</label></li>
+                        <li><label><input type="radio" name="legendary-title" value="Viajante Internacional das Frases"> Viajante Internacional das Frases ✈️</label></li>
+                        <li><label><input type="radio" name="legendary-title" value="Super Designer de Ideias"> Super Designer de Ideias 🎨</label></li>
+                        <li><label><input type="radio" name="legendary-title" value="Agente Lendário do Inglês" checked> Agente Lendário do Inglês 🕵️‍♂️</label></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <button id="generate-certificate-btn" class="check-btn" style="background: var(--c-green); color: white; border-bottom-color: #25A25A; width: 100%; padding: 1.2rem; font-size: 1.5rem;">
+                Gerar meu Certificado de Mestre!
+            </button>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('generate-certificate-btn').addEventListener('click', () => {
+            const studentName = document.getElementById('certificate-name').value;
+            const selectedTitle = document.querySelector('input[name="legendary-title"]:checked').value;
+
+            if (studentName.trim() === "") {
+                alert("Por favor, digite seu nome para o certificado!");
+                return;
+            }
+
+            // Salva as informações no localStorage para a próxima página usar
+            localStorage.setItem('certificate_name', studentName);
+            localStorage.setItem('certificate_title', selectedTitle);
+
+            // Redireciona para a página do certificado
+            window.location.href = 'certificado.html';
+        });
+    </script>
+</body>
+</html>

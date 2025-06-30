@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Certificado!</title>
+    <link rel="stylesheet" href="../css/semanas.css">
+    
+    <style>
+        /* Estilos para a tela (VISUALIZAÇÃO NO NAVEGADOR) */
+        body {
+            background-color: var(--c-bg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        .certificate-wrapper {
+            width: 100%;
+            max-width: 800px;
+            background-color: var(--c-white);
+            border: 10px solid var(--c-blue);
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M11 18.273l8.445 2.373-2.373 8.445L8.627 20.648zM29.118 9.352l2.373 8.445L23.045 20.17 20.673 11.727zM31.5 29.118l8.445-2.373L42.318 35.2l-8.445 2.373zm-2.373 8.445l8.445 2.373-2.373 8.445-8.445-2.373zM11.727 79.327l8.445-2.373 2.373 8.445-8.445 2.373zM20.673 88.273l-2.373-8.445 8.445-2.373 2.373 8.445zM38.445 64.8l-2.373-8.445 8.445-2.373 2.373 8.445zM31.5 70.882l8.445 2.373-2.373 8.445-8.445-2.373zM64.8 38.445l-8.445-2.373 2.373-8.445 8.445 2.373zM70.882 31.5l-2.373-8.445 8.445-2.373 2.373 8.445zM79.327 88.273l-8.445-2.373 2.373-8.445 8.445 2.373zM88.273 79.327l-2.373 8.445-8.445-2.373 2.373-8.445z" fill="%2300A9FF" fill-opacity="0.08" fill-rule="evenodd"/></svg>');
+        }
+        
+        .cert-title { font-size: 2.5rem; font-weight: 800; color: var(--c-blue); }
+        .cert-subtitle { font-size: 1.2rem; color: var(--c-text); margin: 0.5rem 0 2rem 0; }
+        .cert-name { font-size: 2.2rem; font-weight: 700; color: #E67E22; border-bottom: 3px solid var(--c-border); padding-bottom: 1rem; margin-bottom: 1rem; }
+        .cert-description { font-size: 1.1rem; line-height: 1.8; }
+        .cert-title-earned { background-color: var(--c-yellow); color: var(--c-text); padding: 0.5rem 1rem; border-radius: 50px; font-weight: 700; display: inline-block; margin: 1rem 0; }
+        .cert-footer { margin-top: 3rem; display: flex; justify-content: space-around; font-style: italic; }
+        .action-button-container { width: 100%; max-width: 800px; text-align: center; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+    
+    <div class="certificate-wrapper" id="certificateElement">
+        <!-- O conteúdo visual do certificado vai aqui dentro -->
+        <h1 class="cert-title">Certificado de Mestre</h1>
+        <p class="cert-subtitle">Concedido com honra para:</p>
+        <h2 class="cert-name" id="certificate-student-name">[Nome do Aluno]</h2>
+        <p class="cert-description">
+            Por ter completado com sucesso e bravura a <strong>Aventura de Férias de Inglês</strong>, demonstrando habilidade excepcional em todas as missões e se tornando um...
+        </p>
+        <div class="cert-title-earned" id="certificate-student-title">[Título Lendário]</div>
+        <div class="cert-footer">
+            <p><strong>Data:</strong> <span id="certificate-date"></span></p>
+            <p><strong>Assinatura:</strong> Academia de Super Agentes</p>
+        </div>
+    </div>
+
+    <!-- Container para os botões -->
+    <div class="action-button-container">
+        <button id="download-btn" class="check-btn">🖼️ Fazer Download da Imagem</button>
+        <a href="../index.html" class="back-button" style="display: block; margin-top: 1rem;">Voltar ao Mapa de Missões</a>
+    </div>
+
+    <!-- BIBLIOTECA EXTERNA PRIMEIRO -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <!-- SCRIPT DA PÁGINA -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Preenche o certificado com as informações
+            const studentName = localStorage.getItem('certificate_name') || "Aventureiro(a) Lendário(a)";
+            const studentTitle = localStorage.getItem('certificate_title') || "Mestre do Inglês";
+            document.getElementById('certificate-student-name').textContent = studentName;
+            document.getElementById('certificate-student-title').textContent = studentTitle;
+            const today = new Date();
+            document.getElementById('certificate-date').textContent = today.toLocaleDateString('pt-BR');
+        });
+
+        // NOVA LÓGICA DE DOWNLOAD
+        const downloadButton = document.getElementById('download-btn');
+        const certificateElement = document.getElementById('certificateElement');
+
+        downloadButton.addEventListener('click', () => {
+            downloadButton.textContent = "Gerando imagem...";
+            downloadButton.disabled = true;
+
+            html2canvas(certificateElement, { 
+                scale: 3, // Aumenta a resolução para uma imagem de altíssima qualidade
+                useCORS: true,
+                backgroundColor: null // Mantém o fundo branco do elemento, se houver
+            }).then(canvas => {
+                // Cria um link temporário na memória
+                const link = document.createElement('a');
+                
+                // Define o nome do arquivo personalizado
+                const studentName = localStorage.getItem('certificate_name') || "Aventureiro";
+                const filename = `Certificado-${studentName.replace(/ /g, '_')}.png`;
+                link.download = filename;
+                
+                // Converte o canvas para uma imagem PNG e define como o alvo do link
+                link.href = canvas.toDataURL('image/png');
+                
+                // Simula o clique no link para iniciar o download
+                link.click();
+
+                // Restaura o botão ao estado original
+                downloadButton.textContent = "🖼️ Fazer Download da Imagem";
+                downloadButton.disabled = false;
+            }).catch(err => {
+                // Em caso de erro
+                console.error("Oops, algo deu errado!", err);
+                alert("Não foi possível gerar a imagem. Tente novamente.");
+                downloadButton.textContent = "Fazer Download da Imagem";
+                downloadButton.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
