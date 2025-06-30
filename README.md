@@ -1,6 +1,6 @@
 # plano-ferias-joao-miguel
 
-This project is designed to outline a vacation plan for João Miguel, consisting of four weekly missions. Each week has its own dedicated HTML file that details the activities planned for that week.
+This project is designed to outline a vacation plan for Lylia Barros Rosa, consisting of four weekly missions. Each week has its own dedicated HTML file that details the activities planned for that week.
 
 ## Project Structure
 

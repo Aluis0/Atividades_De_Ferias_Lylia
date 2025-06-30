@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semana 4: Missão Final do Super Agente!</title>
+    <title>Semana 4: A Vida na Escola!</title>
     <link rel="stylesheet" href="../css/semanas.css">
 </head>
 <body>
@@ -11,139 +11,129 @@
         <a href="../index.html" class="back-button">← Voltar ao Mapa de Missões</a>
         
         <div class="weekly-briefing">
-            <h2>Missão Final do Super Agente! 🕵️‍♂️</h2>
-            <p>
-                Chegou a hora da sua missão mais importante, agente João Miguel! Nesta semana, você vai mostrar tudo o que aprendeu: vai ler e entender textos secretos, montar frases completas, ouvir e decifrar mensagens de áudio e responder perguntas sobre você. Use todos os seus superpoderes do inglês para completar cada desafio e conquistar o título de Mestre do Inglês! <button class="audio-btn" data-audio-src="../assets/audio/semana4_intro_geral.mp3">🔊</button>
-            </p>
+            <h2>Missão: A Vida na Escola! 🏫✏️</h2>
+            <p>Olá, super estudante Lylia! Esta semana, vamos explorar o dia a dia na escola. Você vai aprender a falar sobre outras pessoas usando palavras como <span class="en-word">him</span>, <span class="en-word">her</span> e <span class="en-word">us</span>, e a dar sua opinião sobre tudo o que acontece nos corredores. Prepare o seu material!
+            <button class="audio-btn" data-audio-src="../assets/audio/semana4_intro_geral.mp3">🔊</button></p>
         </div>
 
         <main>
-            <!-- TREINO 1: INTERPRETAÇÃO DE TEXTO -->
+            <!-- TREINO 1: PRONOMES OBJETO -->
             <section class="mission-day">
-                <h2>Treino 1: Decifrando o Dossiê</h2>
+                <h2>Treino 1: Para Quem é a Mensagem?</h2>
                 <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Sua primeira tarefa é ler o dossiê sobre o agente Phillip e responder às perguntas para provar que você entendeu tudo.</p>
-                    
-                    <div style="background: #f0f4f8; padding: 1rem; border-radius: 12px; margin: 1.5rem 0;">
-                        <h4 style="margin-bottom: 0.5rem;">Dossiê do Agente Phillip:</h4>
-                        <p style="font-style: italic; color: var(--c-text);">
-                            "Hello! My name is Phillip. I live in the U.S.A., and I speak English. I study in the morning. I study history and math, but I don't like science. In the evenings, I read online comic books and I write messages to my friends. I have many friends, but they don't like comic books."
-                        </p>
-                    </div>
-
-                    <p class="prompt">Responda às perguntas sobre o texto:</p>
+                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Quando a ação é para alguém, usamos os pronomes objeto! Ex: `talk to me`, `help him`, `helps us`.</p>
+                    <p class="prompt">Missão: Complete as frases com o pronome objeto correto!</p>
                     <ul class="transform-activity">
-                        <li><p class="prompt">1. Where does Phillip live?</p>
-                            <input type="text" id="s4d1q1" data-answer="he lives in the u.s.a." class="input-full"><div class="feedback-message" id="s4d1-feedback1"></div></li>
-                        <li><p class="prompt">2. What does he study in the morning?</p>
-                            <input type="text" id="s4d1q2" data-answer="he studies history and math" class="input-full"><div class="feedback-message" id="s4d1-feedback2"></div></li>
-                        <li><p class="prompt">3. Does he like science?</p>
-                            <input type="text" id="s4d1q3" data-answer="no, he doesn't" class="input-full"><div class="feedback-message" id="s4d1-feedback3"></div></li>
-                        <li><p class="prompt">4. What does he do in the evenings?</p>
-                            <input type="text" id="s4d1q4" data-answer="he reads online comic books and writes messages" class="input-full"><div class="feedback-message" id="s4d1-feedback4"></div></li>
-                        <li><p class="prompt">5. Do his friends like comic books?</p>
-                            <input type="text" id="s4d1q5" data-answer="no, they don't" class="input-full"><div class="feedback-message" id="s4d1-feedback5"></div></li>
+                        <li class="inline-item"><span>The principal always helps the students. She is very friendly to</span> <input type="text" id="s4q1_1" data-answer="them" class="input-sm">.</li>
+                        <li class="inline-item"><span>We are in the principal's office. She wants to talk to</span> <input type="text" id="s4q1_2" data-answer="us" class="input-sm">.</li>
+                        <li class="inline-item"><span>Is there anybody to help</span> <input type="text" id="s4q1_3" data-answer="him" class="input-sm">? (Samuel)</li>
+                        <li class="inline-item"><span>Can you help</span> <input type="text" id="s4q1_4" data-answer="me" class="input-sm">, please?</li>
+                        <li class="inline-item"><span>I like Bruna. I want to talk to</span> <input type="text" id="s4q1_5" data-answer="her" class="input-sm">.</li>
                     </ul>
-                    <button id="verify-s4d1" class="check-btn">Verificar</button>
+                    <button id="verify-s4t1" class="check-btn">Verificar</button>
                 </div>
             </section>
 
-            <!-- TREINO 2: LIKE TO + VERBO -->
+            <!-- TREINO 2: EXPRESSANDO OPINIÕES -->
             <section class="mission-day">
-                <h2>Treino 2: Código "Like To"</h2>
+                <h2>Treino 2: O Clube de Debates</h2>
                 <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">A estrutura <span class="en-word">like to + AÇÃO</span> é super comum! Significa "gostar de fazer algo".</p>
-                    <p class="prompt">Missão: Traduza as frases usando o código "like to".</p>
-                    <ul class="transform-activity">
-                        <li><p class="prompt">1. Eles gostam de ler quadrinhos.</p>
-                             <input type="text" id="s4d2q1" data-answer="they like to read comic books" class="input-full"><div class="feedback-message" id="s4d2-feedback1"></div></li>
-                        <li><p class="prompt">2. Eles gostam de escrever histórias curtas?</p>
-                            <input type="text" id="s4d2q2" data-answer="do they like to write short stories?" class="input-full"><div class="feedback-message" id="s4d2-feedback2"></div></li>
-                        <li><p class="prompt">3. Eu gosto de escrever para meus amigos.</p>
-                            <input type="text" id="s4d2q3" data-answer="i like to write to my friends" class="input-full"><div class="feedback-message" id="s4d2-feedback3"></div></li>
-                        <li><p class="prompt">4. Nós não gostamos de ler mensagens longas.</p>
-                            <input type="text" id="s4d2q4" data-answer="we don't like to read long messages" class="input-full"><div class="feedback-message" id="s4d2-feedback4"></div></li>
-                        <li><p class="prompt">5. Você gosta de ler livros online?</p>
-                            <input type="text" id="s4d2q5" data-answer="do you like to read online books?" class="input-full"><div class="feedback-message" id="s4d2-feedback5"></div></li>
-                    </ul>
-                     <button id="verify-s4d2" class="check-btn">Verificar</button>
-                </div>
-            </section>
-
-            <!-- TREINO 3: REVISÃO GERAL DE ESCRITA -->
-            <section class="mission-day">
-                <h2>Treino 3: Desafio do Construtor</h2>
-                <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Vamos revisar! Monte as frases completas com os ingredientes dados.</p>
-                    <ul class="transform-activity">
-                        <li><p class="prompt">1. I / want / the / sneakers / (blue)</p>
-                            <input type="text" id="s4d3q1" data-answer="i want the blue sneakers" class="input-full"><div class="feedback-message" id="s3d3-feedback1"></div></li>
-                        <li><p class="prompt">2. Do you / study / history / at school?</p>
-                            <input type="text" id="s4d3q2" data-answer="do you study history at school?" class="input-full"><div class="feedback-message" id="s3d3-feedback2"></div></li>
-                        <li><p class="prompt">3. We / have to / read / the posts</p>
-                            <input type="text" id="s4d3q3" data-answer="we have to read the posts" class="input-full"><div class="feedback-message" id="s3d3-feedback3"></div></li>
-                        <li><p class="prompt">4. Where / do they / live?</p>
-                            <input type="text" id="s4d3q4" data-answer="where do they live?" class="input-full"><div class="feedback-message" id="s3d3-feedback4"></div></li>
-                        <li><p class="prompt">5. I like / to write messages / to / my friends</p>
-                            <input type="text" id="s4d3q5" data-answer="i like to write messages to my friends" class="input-full"><div class="feedback-message" id="s3d3-feedback5"></div></li>
-                    </ul>
-                    <button id="verify-s4d3" class="check-btn">Verificar</button>
-                </div>
-            </section>
-
-             <!-- TREINO 4: ESCUTA E ESCRITA -->
-            <section class="mission-day">
-                <h2>Treino 4: Missão de Escuta 🎧</h2>
-                <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Agente, sua missão é ouvir as mensagens de áudio secretas e transcrevê-las perfeitamente.</p>
+                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Como um bom debatedor, você precisa saber concordar e discordar! </p>
+                    <p class="prompt">Missão: Responda às perguntas usando a expressão mais lógica.</p>
                     <ul class="transform-activity">
                         <li>
-        <p class="prompt">1. <button class="audio-btn" style="background:var(--c-blue); color:white;" data-audio-src="../assets/audio/s4d4_1.mp3">🔊</button></p>
-        <input type="text" id="s4d4q1" data-answer="do they write posts in the evening?" class="input-full"><div class="feedback-message" id="s4d4-feedback1"></div>
-    </li>
-    <li>
-        <p class="prompt">2. <button class="audio-btn" style="background:var(--c-blue); color:white;" data-audio-src="../assets/audio/s4d4_2.mp3">🔊</button></p>
-        <input type="text" id="s4d4q2" data-answer="do they like to read comic books?" class="input-full"><div class="feedback-message" id="s4d4-feedback2"></div>
-    </li>
-    <li>
-        <p class="prompt">3. <button class="audio-btn" style="background:var(--c-blue); color:white;" data-audio-src="../assets/audio/s4d4_3.mp3">🔊</button></p>
-        <input type="text" id="s4d4q3" data-answer="we speak english with the teacher" class="input-full"><div class="feedback-message" id="s4d4-feedback3"></div>
-    </li>
-    <li>
-        <p class="prompt">4. <button class="audio-btn" style="background:var(--c-blue); color:white;" data-audio-src="../assets/audio/s4d4_4.mp3">🔊</button></p>
-        <input type="text" id="s4d4q4" data-answer="they don't like to read long stories" class="input-full"><div class="feedback-message" id="s4d4-feedback4"></div>
-    </li>
-    <li>
-        <p class="prompt">5. <button class="audio-btn" style="background:var(--c-blue); color:white;" data-audio-src="../assets/audio/s4d4_5.mp3">🔊</button></p>
-        <input type="text" id="s4d4q5" data-answer="i like to post many pictures on instagram" class="input-full"><div class="feedback-message" id="s4d4-feedback5"></div>
-    </li>
+                            <p class="prompt">"Can we get together in the cafeteria at recess?"</p>
+                            <div class="multiple-choice-options"><button class="choice-btn correct-answer">For sure</button><button class="choice-btn">I don't think so</button><button class="choice-btn">In my opinion</button></div>
+                        </li>
+                        <li>
+                            <p class="prompt">"Are the teachers in the teacher's lounge now?"</p>
+                            <div class="multiple-choice-options"><button class="choice-btn">For sure</button><button class="choice-btn correct-answer">I think so</button><button class="choice-btn">In my opinion</button></div>
+                        </li>
+                         <li>
+                            <p class="prompt">"Are your classmates confident about the geography test?"</p>
+                            <div class="multiple-choice-options"><button class="choice-btn">I think so</button><button class="choice-btn correct-answer">I don't think so</button><button class="choice-btn">For sure</button></div>
+                        </li>
+                         <li>
+                            <p class="prompt">"I think it's better to have tests before recess."</p>
+                            <div class="multiple-choice-options"><button class="choice-btn correct-answer">In my opinion</button><button class="choice-btn">I think so</button><button class="choice-btn">For sure</button></div>
+                        </li>
+                        <li>
+                            <p class="prompt">"Can we write an essay about accessible services?"</p>
+                            <div class="multiple-choice-options"><button class="choice-btn">I don't think so</button><button class="choice-btn">In my opinion</button><button class="choice-btn correct-answer">For sure</button></div>
+                        </li>
                     </ul>
-                    <button id="verify-s4d4" class="check-btn">Verificar</button>
                 </div>
             </section>
 
-            <!-- TREINO 5: RESPONDA AS PERGUNTAS -->
+            <!-- TREINO 3: THERE IS / THERE ARE -->
             <section class="mission-day">
-                <h2>Treino 5: Interrogatório Final</h2>
+                <h2>Treino 3: O Que Tem na Escola?</h2>
                 <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Para a última tarefa, responda às perguntas sobre você! Não há respostas certas ou erradas, apenas a sua verdade!</p>
+                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Lembre-se: <span class="en-word">There is</span> (para 1 coisa), <span class="en-word">There are</span> (para 2 ou mais).</p>
+                    <p class="prompt">Missão: Reescreva as frases usando a forma correta!</p>
                     <ul class="transform-activity">
-                         <li><p class="prompt">1. Do you have many comic books?</p>
-                             <input type="text" placeholder="Yes, I do. / No, I don't." class="input-full"></li>
-                         <li><p class="prompt">2. What do you like to write on the computer?</p>
-                             <input type="text" placeholder="I like to write..." class="input-full"></li>
-                         <li><p class="prompt">3. Do you write many messages to your friends?</p>
-                             <input type="text" placeholder="Yes, I do. / No, I don't." class="input-full"></li>
-                         <li><p class="prompt">4. What's your phone number?</p>
-                             <input type="text" placeholder="It's..." class="input-full"></li>
-                         <li><p class="prompt">5. Do you like to read online books?</p>
-                             <input type="text" placeholder="Yes, I do. / No, I don't." class="input-full"></li>
+                        <li><p class="prompt">1. (O que) ___ in front of the cafeteria?</p>
+                            <input type="text" id="s4q3_1" data-answer="what is there in front of the cafeteria?" class="input-full"><div class="feedback-message" id="s4t3-feedback1"></div></li>
+                        <li><p class="prompt">2. (Existe) ___ a good cafeteria in my school.</p>
+                            <input type="text" id="s4q3_2" data-answer="there is a good cafeteria in my school" class="input-full"><div class="feedback-message" id="s4t3-feedback2"></div></li>
+                        <li><p class="prompt">3. (Não existem) ___ many classrooms.</p>
+                            <input type="text" id="s4q3_3" data-answer="there are not many classrooms" data-alternative="there aren't many classrooms" class="input-full"><div class="feedback-message" id="s4t3-feedback3"></div></li>
+                        <li><p class="prompt">4. (Existe) ___ a sports field.</p>
+                            <input type="text" id="s4q3_4" data-answer="there is a sports field" class="input-full"><div class="feedback-message" id="s4t3-feedback4"></div></li>
+                        <li><p class="prompt">5. (Existem) ___ accessible restrooms.</p>
+                            <input type="text" id="s4q3_5" data-answer="there are accessible restrooms" class="input-full"><div class="feedback-message" id="s4t3-feedback5"></div></li>
                     </ul>
-                    <p style="margin-top: 1rem; font-style: italic; color: var(--c-text); opacity: 0.8;">Esta atividade é de escrita livre. Mostre o que você sabe!</p>
+                    <button id="verify-s4t3" class="check-btn">Verificar</button>
                 </div>
             </section>
             
-            <button id="complete-week-btn" data-week="4" class="check-btn">CONCLUIR AVENTURA!</button>
+            <!-- TREINO 4: INTERPRETAÇÃO DE TEXTO -->
+            <section class="mission-day">
+                <h2>Treino 4: O Dia a Dia de Bruna</h2>
+                <div class="activity-box">
+                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Leia o perfil da Bruna e descubra tudo sobre a rotina escolar dela.</p>
+                    <div style="background: #f0f4f8; padding: 1rem; border-radius: 12px; margin: 1.5rem 0;">
+                        <h4 style="margin-bottom: 0.5rem;">Perfil: Bruna, a Estudante</h4>
+                        <p style="font-style: italic; color: var(--c-text);">"Hi, I'm Bruna and I'm a student. My classes start at 7:00 a.m., and I have recess at 10:00. In the afternoon, I have chemistry and biology lab class. There is a good cafeteria in my school, so I can have lunch there. My school isn't very big. There aren't many classrooms, but there is a sports field and accessible restrooms for students with disabilities."</p>
+                    </div>
+                    <ul class="transform-activity">
+                        <li><p class="prompt">1. What time do her classes start?</p>
+                            <input type="text" id="s4q4_1" data-answer="they start at 7:00 a.m." class="input-full"><div class="feedback-message" id="s4t4-feedback1"></div></li>
+                        <li><p class="prompt">2. What class does she have in the afternoon?</p>
+                            <input type="text" id="s4q4_2" data-answer="she has chemistry and biology lab class" class="input-full"><div class="feedback-message" id="s4t4-feedback2"></div></li>
+                        <li><p class="prompt">3. Where can she have lunch?</p>
+                            <input type="text" id="s4q4_3" data-answer="she can have lunch in the cafeteria" class="input-full"><div class="feedback-message" id="s4t4-feedback3"></div></li>
+                        <li><p class="prompt">4. Is her school very big?</p>
+                            <input type="text" id="s4q4_4" data-answer="no, it isn't" class="input-full"><div class="feedback-message" id="s4t4-feedback4"></div></li>
+                         <li><p class="prompt">5. What is there for students with disabilities?</p>
+                            <input type="text" id="s4q4_5" data-answer="there are accessible restrooms" class="input-full"><div class="feedback-message" id="s4t4-feedback5"></div></li>
+                    </ul>
+                    <button id="verify-s4t4" class="check-btn">Verificar</button>
+                </div>
+            </section>
+            
+            <!-- TREINO 5: MINHA ESCOLA, MINHAS OPINIÕES -->
+            <section class="mission-day">
+                <h2>Treino 5: Minha Vez no Pátio!</h2>
+                <div class="activity-box">
+                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Agora é com você, Lylia! Responda às perguntas sobre sua escola e seus amigos.</p>
+                    <ul class="transform-activity">
+                         <li><p class="prompt">1. Is there a big cafeteria in your school?</p>
+                             <input type="text" placeholder="Yes, there is. / No, there isn't." class="input-full"></li>
+                         <li><p class="prompt">2. What do you think about your classes?</p>
+                             <input type="text" placeholder="In my opinion, they are..." class="input-full"></li>
+                         <li><p class="prompt">3. We want to study together. Can you help us?</p>
+                             <input type="text" placeholder="For sure! / Yes, I can." class="input-full"></li>
+                         <li><p class="prompt">4. Your friend needs help. What do you say to her?</p>
+                             <input type="text" placeholder="I can help you." class="input-full"></li>
+                         <li><p class="prompt">5. Tell me a little about your school.</p>
+                             <input type="text" placeholder="In my school, there is..." class="input-full"></li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-style: italic; color: var(--c-text); opacity: 0.8;">Esta atividade é de escrita livre. Dê a sua opinião!</p>
+                </div>
+            </section>
+            
+            <button id="complete-week-btn" data-week="4" class="check-btn">CONCLUIR MISSÃO DA SEMANA</button>
         </main>
     </div>
     <script src="../js/atividades.js"></script>

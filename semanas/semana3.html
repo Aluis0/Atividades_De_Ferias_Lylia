@@ -1,153 +1,387 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semana 3: Designer da Minha Vida!</title>
-    <link rel="stylesheet" href="../css/semanas.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semana 3: A Aventura Eco-Exploradora!</title>
+    <link rel="stylesheet" href="../css/semanas.css" />
+  </head>
+  <body>
     <div class="container">
-        <a href="../index.html" class="back-button">← Voltar ao Mapa de Missões</a>
-        
-        <div class="weekly-briefing">
-            <h2>Missão: Mestre das Palavras! 🔤</h2>
-            <p>
-                Bem-vindo à Semana 3, João Miguel! Prepare-se para desafios de verdade: você vai aprender a montar frases completas em inglês, usar adjetivos e cores na ordem certa, escolher entre <span class="en-word">have</span> e <span class="en-word">want</span>, praticar perguntas e respostas, e até decifrar códigos secretos de áudio! Cada treino vai te deixar mais rápido e criativo para se comunicar em inglês no dia a dia. Vamos jogar e desbloquear novos poderes com as palavras!
-                <button class="audio-btn" data-audio-src="../assets/audio/semana3_intro_geral.mp3">🔊</button>
+      <a href="../index.html" class="back-button"
+        >← Voltar ao Mapa de Missões</a
+      >
+
+      <div class="weekly-briefing">
+        <h2>Missão: A Aventura Eco-Exploradora! 🌳🏞️</h2>
+        <p>
+          Olá, exploradora Lylia! Esta semana, vamos viajar por cidades e
+          natureza. Você vai aprender a descrever o que existe nos lugares com
+          <span class="en-word">There is</span> e
+          <span class="en-word">There are</span>, dar dicas de como cuidar do
+          planeta e falar sobre sentimentos. Mochila nas costas e vamos lá!
+          <button
+            class="audio-btn"
+            data-audio-src="../assets/audio/semana3_intro_geral.mp3"
+          >
+            🔊
+          </button>
+        </p>
+      </div>
+
+      <main>
+        <!-- TREINO 1: THERE IS / THERE ARE -->
+        <section class="mission-day">
+          <h2>Treino 1: O Mapa do Tesouro</h2>
+          <div class="activity-box">
+            <p class="prompt" style="font-size: 1.1rem; line-height: 1.7">
+              Para dizer "existe" ou "há", usamos: <br />•
+              <span class="en-word">There is</span> para UMA coisa. <br />•
+              <span class="en-word">There are</span> para DUAS OU MAIS coisas.
             </p>
-        </div>
+            <p class="prompt">
+              Missão: Complete o mapa com <span class="en-word">is</span> ou
+              <span class="en-word">are</span>!
+            </p>
+            <ul class="transform-activity">
+              <li class="inline-item">
+                <span>There</span>
+                <input
+                  type="text"
+                  id="s3q1_1"
+                  data-answer="are"
+                  class="input-xs"
+                />
+                <span>big beds in the hotel.</span>
+              </li>
+              <li class="inline-item">
+                <span>There</span>
+                <input
+                  type="text"
+                  id="s3q1_2"
+                  data-answer="is"
+                  class="input-xs"
+                />
+                <span>a small sleeping bag here.</span>
+              </li>
+              <li class="inline-item">
+                <span>Is</span>
+                <input
+                  type="text"
+                  id="s3q1_3"
+                  data-answer="is"
+                  class="input-xs"
+                />
+                <span>there a cave on the island?</span>
+              </li>
+              <li class="inline-item">
+                <span>Are</span>
+                <input
+                  type="text"
+                  id="s3q1_4"
+                  data-answer="are"
+                  class="input-xs"
+                />
+                <span>there natural pools near the lake?</span>
+              </li>
+              <li class="inline-item">
+                <span>There</span>
+                <input
+                  type="text"
+                  id="s3q1_5"
+                  data-answer="are"
+                  class="input-xs"
+                />
+                <span>many flowers and trees.</span>
+              </li>
+            </ul>
+            <button id="verify-s3t1" class="check-btn">Verificar</button>
+          </div>
+        </section>
 
-        <main>
-            <!-- TREINO 1: TRADUÇÃO GUIADA -->
-            <section class="mission-day">
-                <h2>Treino 1: Construindo Pontes (PT-BR -> EN)</h2>
-                <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Sua missão é ser um tradutor! Leia a frase em português e escreva a versão completa em inglês.</p>
-                    <ul class="transform-activity">
-                        <li><p class="prompt">1. Eu tenho um telefone celular novo.</p>
-                            <input type="text" id="s3d1q1" data-answer="i have a new cell phone" class="input-full"><div class="feedback-message" id="s3d1-feedback1"></div></li>
-                        <li><p class="prompt">2. Eles não querem este computador velho.</p>
-                            <input type="text" id="s3d1q2" data-answer="they don't want this old computer" class="input-full"><div class="feedback-message" id="s3d1-feedback2"></div></li>
-                        <li><p class="prompt">3. Nós temos que beber água.</p>
-                            <input type="text" id="s3d1q3" data-answer="we have to drink water" class="input-full"><div class="feedback-message" id="s3d1-feedback3"></div></li>
-                        <li><p class="prompt">4. Você tem muitos livros velhos?</p>
-                            <input type="text" id="s3d1q4" data-answer="do you have many old books?" class="input-full"><div class="feedback-message" id="s3d1-feedback4"></div></li>
-                        <li><p class="prompt">5. Nós não temos que estudar ciências.</p>
-                            <input type="text" id="s3d1q5" data-answer="we don't have to study science" class="input-full"><div class="feedback-message" id="s3d1-feedback5"></div></li>
-                    </ul>
-                    <button id="verify-s3d1" class="check-btn">Verificar</button>
+        <!-- TREINO 2: VERBOS DE AÇÃO E IMPERATIVO -->
+        <section class="mission-day">
+          <h2>Treino 2: Dicas do Eco-Guia</h2>
+          <div class="activity-box">
+            <p class="prompt" style="font-size: 1.1rem; line-height: 1.7">
+              Para dar uma ordem ou uma sugestão, usamos o verbo de ação
+              diretamente!
+            </p>
+            <p class="prompt">
+              Missão: Complete as frases com a ação correta para ser uma super
+              eco-guia!
+            </p>
+            <ul class="transform-activity">
+              <li>
+                <p class="prompt inline-item">
+                  Don't ___ there alone! It's dangerous.
+                </p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn">going</button>
+                  <button class="choice-btn correct-answer">go</button>
+                  <button class="choice-btn">to go</button>
                 </div>
-            </section>
-
-            <!-- TREINO 2: MONTANDO FRASES COM ADJETIVOS -->
-            <section class="mission-day">
-                <h2>Treino 2: Quebra-cabeça de Frases</h2>
-                <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Use os "ingredientes" para montar a frase completa na ordem certa. Lembre-se: qualidade ANTES da coisa!</p>
-                    <ul class="transform-activity">
-                        <li><p class="prompt">1. Ingredientes: I / want / a / skateboard / (red)</p>
-                             <input type="text" id="s3d2q1" data-answer="i want a red skateboard" class="input-full"><div class="feedback-message" id="s3d2-feedback1"></div></li>
-                        <li><p class="prompt">2. Ingredientes: You / have / a / backpack / (yellow)</p>
-                            <input type="text" id="s3d2q2" data-answer="you have a yellow backpack" class="input-full"><div class="feedback-message" id="s3d2-feedback2"></div></li>
-                        <li><p class="prompt">3. Ingredientes: They / don't have / a / computer / (old)</p>
-                            <input type="text" id="s3d2q3" data-answer="they don't have an old computer" class="input-full"><div class="feedback-message" id="s3d2-feedback3"></div></li>
-                        <li><p class="prompt">4. Ingredientes: We / don't want / a / video game / (new)</p>
-                            <input type="text" id="s3d2q4" data-answer="we don't want a new video game" class="input-full"><div class="feedback-message" id="s3d2-feedback4"></div></li>
-                        <li><p class="prompt">5. Ingredientes: I / have / many / friends / (new)</p>
-                            <input type="text" id="s3d2q5" data-answer="i have many new friends" class="input-full"><div class="feedback-message" id="s3d2-feedback5"></div></li>
-                    </ul>
-                     <button id="verify-s3d2" class="check-btn">Verificar</button>
+              </li>
+              <li>
+                <p class="prompt inline-item">
+                  Can we ___ pictures in the cave?
+                </p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn correct-answer">take</button>
+                  <button class="choice-btn">use</button>
+                  <button class="choice-btn">to take</button>
                 </div>
-            </section>
-
-            <!-- TREINO 3: ESCOLHA E REESCREVA (HAVE/WANT) -->
-            <section class="mission-day">
-                <h2>Treino 3: Escolha Certa, Frase Perfeita</h2>
-                <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Decida se a frase precisa de <span class="en-word">have</span> ou <span class="en-word">want</span> e reescreva-a por completo.</p>
-                    <ul class="transform-activity">
-                        <li><p class="prompt">1. (O que você sonha em ter) I ___ a black skateboard.</p>
-                            <input type="text" id="s3d3q1" data-answer="i want a black skateboard" class="input-full"><div class="feedback-message" id="s3d3-feedback1"></div></li>
-                        <li><p class="prompt">2. (O que você tem na sua mochila) I ___ many books.</p>
-                            <input type="text" id="s3d3q2" data-answer="i have many books" class="input-full"><div class="feedback-message" id="s3d3-feedback2"></div></li>
-                        <li><p class="prompt">3. (É uma obrigação) We ___ to study science.</p>
-                            <input type="text" id="s3d3q3" data-answer="we have to study science" class="input-full"><div class="feedback-message" id="s3d3-feedback3"></div></li>
-                        <li><p class="prompt">4. (Eles não desejam isso) They don't ___ a red car.</p>
-                            <input type="text" id="s3d3q4" data-answer="they don't want a red car" class="input-full"><div class="feedback-message" id="s3d3-feedback4"></div></li>
-                        <li><p class="prompt">5. (Você quer saber se a pessoa tem amigos) Do you ___ many friends?</p>
-                            <input type="text" id="s3d3q5" data-answer="do you have many friends?" class="input-full"><div class="feedback-message" id="s3d3-feedback5"></div></li>
-                    </ul>
-                    <button id="verify-s3d3" class="check-btn">Verificar</button>
+              </li>
+              <li>
+                <p class="prompt inline-item">
+                  Turn ___ the light in the kitchen, please.
+                </p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn">on</button>
+                  <button class="choice-btn correct-answer">off</button>
+                  <button class="choice-btn">of</button>
                 </div>
-            </section>
-
-             <!-- TREINO 4: DESCREVENDO CENAS (THIS/THAT) -->
-            <section class="mission-day">
-                <h2>Treino 4: Descrevendo a Cena</h2>
-                <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Olhe a situação e escreva a frase completa usando <span class="en-word">this</span> (para perto) ou <span class="en-word">that</span> (para longe).</p>
-                    <ul class="transform-activity">
-                        <li><p class="prompt">1. (Você aponta para um computador LONGE) Eles querem...</p>
-                            <input type="text" id="s3d4q1" data-answer="they want that computer" class="input-full"><div class="feedback-message" id="s3d4-feedback1"></div></li>
-                        <li><p class="prompt">2. (Você segura um celular na mão) Eu não quero...</p>
-                            <input type="text" id="s3d4q2" data-answer="i don't want this cell phone" class="input-full"><div class="feedback-message" id="s3d4-feedback2"></div></li>
-                        <li><p class="prompt">3. (Seu amigo mostra um livro que está PERTO de vocês) Nós gostamos...</p>
-                            <input type="text" id="s3d4q3" data-answer="we like this book" class="input-full"><div class="feedback-message" id="s3d4-feedback3"></div></li>
-                        <li><p class="prompt">4. (Você vê uma casa bonita do outro lado da rua) Eu quero...</p>
-                            <input type="text" id="s3d4q4" data-answer="i want that house" class="input-full"><div class="feedback-message" id="s3d4-feedback4"></div></li>
-                        <li><p class="prompt">5. (A caneta está na sua mesa, perto de você) Eu gosto...</p>
-                            <input type="text" id="s3d4q5" data-answer="i like this pen" class="input-full"><div class="feedback-message" id="s3d4-feedback5"></div></li>
-                    </ul>
-                    <button id="verify-s3d4" class="check-btn">Verificar</button>
+              </li>
+              <li>
+                <p class="prompt inline-item">
+                  Don't throw glass away! ___ it!
+                </p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn correct-answer">Recycle</button>
+                  <button class="choice-btn">Plant</button>
+                  <button class="choice-btn">Planet</button>
                 </div>
-            </section>
+              </li>
+              <li>
+                <p class="prompt inline-item">
+                  Let's ___ an ambulance. She needs to go to the hospital.
+                </p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn">to call</button>
+                  <button class="choice-btn">calling</button>
+                  <button class="choice-btn correct-answer">call</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-            <!-- TREINO 5: O QUARTO DOS SONHOS -->
-            <!-- TREINO 5: DECIFRANDO CÓDIGOS SECRETOS -->
-<section class="mission-day">
-    <h2>Treino 5: Decifrando Códigos Secretos 🔤</h2>
-    <div class="activity-box">
-        <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Atenção, decifrador! Sua missão é ouvir os códigos secretos de áudio. Cada código é a soletração de uma palavra. Escreva a palavra decifrada!</p>
-        <ul class="transform-activity">
-            <li>
-                <p class="prompt">1. Ouça o código e escreva a palavra: 
-                    <button class="audio-btn" style="background:var(--c-blue); color:white;" data-audio-src="../assets/audio/s3d5_house.mp3">🔊</button>
+        <!-- TREINO 3: ADJETIVOS E SENTIMENTOS -->
+        <section class="mission-day">
+          <h2>Treino 3: Retrato Falado</h2>
+          <div class="activity-box">
+            <p class="prompt" style="font-size: 1.1rem; line-height: 1.7">
+              Use adjetivos para descrever como as pessoas são ou se sentem.
+            </p>
+            <p class="prompt">
+              Missão: Escreva a palavra que melhor descreve cada situação.
+            </p>
+            <ul class="transform-activity">
+              <li class="inline-item">
+                <span>My friend Mary is really</span>
+                <input
+                  type="text"
+                  id="s3q3_1"
+                  data-answer="smart"
+                  class="input-sm"
+                />
+                <span>and calm.</span>
+              </li>
+              <li class="inline-item">
+                <span>My cousin is really</span>
+                <input
+                  type="text"
+                  id="s3q3_2"
+                  data-answer="excited"
+                  class="input-sm"
+                />
+                <span>about the game!</span>
+              </li>
+              <li class="inline-item">
+                <span>My cat is very</span>
+                <input
+                  type="text"
+                  id="s3q3_3"
+                  data-answer="smart"
+                  class="input-sm"
+                />.
+              </li>
+              <li class="inline-item">
+                <span>Are you</span>
+                <input
+                  type="text"
+                  id="s3q3_4"
+                  data-answer="happy"
+                  class="input-sm"
+                />
+                <span>today? – Yes, I am!</span>
+              </li>
+              <li class="inline-item">
+                <span>I need to go to bed now. I'm very</span>
+                <input
+                  type="text"
+                  id="s3q3_5"
+                  data-answer="tired"
+                  class="input-sm"
+                />.
+              </li>
+            </ul>
+            <button id="verify-s3t3" class="check-btn">Verificar</button>
+          </div>
+        </section>
+
+        <!-- TREINO 4: INTERPRETAÇÃO DE TEXTO -->
+        <section class="mission-day">
+          <h2>Treino 4: Explorando Vancouver</h2>
+          <div class="activity-box">
+            <p class="prompt" style="font-size: 1.1rem; line-height: 1.7">
+              Leia a página do diário de um explorador e descubra os segredos da
+              cidade de Vancouver.
+            </p>
+            <div
+              style="
+                background: #f0f4f8;
+                padding: 1rem;
+                border-radius: 12px;
+                margin: 1.5rem 0;
+              "
+            >
+              <h4 style="margin-bottom: 0.5rem">Diário de Bordo: Vancouver</h4>
+              <p style="font-style: italic; color: var(--c-text)">
+                "Pollution and noise are problems in big cities, but there are
+                always interesting places to visit like parks and museums. I am
+                now visiting Vancouver. It's a big city, but there are mountains
+                to climb, clean lakes, and many flowers and trees. It's an
+                eco-friendly city."
+              </p>
+            </div>
+            <ul class="transform-activity">
+              <li>
+                <p class="prompt">1. What are problems in big cities?</p>
+                <input
+                  type="text"
+                  id="s3q4_1"
+                  data-answer="pollution and noise"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s3-feedback4-1"></div>
+              </li>
+              <li>
+                <p class="prompt">
+                  2. What are the interesting places to visit?
                 </p>
-                <input type="text" id="s3d5q1" data-answer="house" class="input-full"><div class="feedback-message" id="s3d5-feedback1"></div>
-            </li>
-            <li>
-                <p class="prompt">2. Ouça o código e escreva a palavra: 
-                    <button class="audio-btn" style="background:var(--c-blue); color:white;" data-audio-src="../assets/audio/s3d5_friend.mp3">🔊</button>
+                <input
+                  type="text"
+                  id="s3q4_2"
+                  data-answer="parks and museums"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s3-feedback4-2"></div>
+              </li>
+              <li>
+                <p class="prompt">3. What is there to do in Vancouver?</p>
+                <input
+                  type="text"
+                  id="s3q4_3"
+                  data-answer="there are mountains to climb"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s3-feedback4-3"></div>
+              </li>
+              <li>
+                <p class="prompt">4. Are there many flowers and trees?</p>
+                <input
+                  type="text"
+                  id="s3q4_4"
+                  data-answer="yes, there are"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s3-feedback4-4"></div>
+              </li>
+              <li>
+                <p class="prompt">5. Is Vancouver an eco-friendly city?</p>
+                <input
+                  type="text"
+                  id="s3q4_5"
+                  data-answer="yes, it is"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s3-feedback4-5"></div>
+              </li>
+            </ul>
+            <button id="verify-s3t4" class="check-btn">Verificar</button>
+          </div>
+        </section>
+
+        <!-- TREINO 5: MINHA CIDADE, MINHAS IDEIAS -->
+        <section class="mission-day">
+          <h2>Treino 5: Minha Cidade Ideal</h2>
+          <div class="activity-box">
+            <p class="prompt" style="font-size: 1.1rem; line-height: 1.7">
+              Agora é a sua vez, Lylia! Descreva um pouco sobre a sua cidade ou
+              um lugar que você gostaria de visitar.
+            </p>
+            <ul class="transform-activity">
+              <li>
+                <p class="prompt">1. In my city, there is a...</p>
+                <input
+                  type="text"
+                  placeholder="Ex: a big park"
+                  class="input-full"
+                />
+              </li>
+              <li>
+                <p class="prompt">2. In my city, there are...</p>
+                <input
+                  type="text"
+                  placeholder="Ex: many interesting museums"
+                  class="input-full"
+                />
+              </li>
+              <li>
+                <p class="prompt">
+                  3. Describe yourself today in one word. (Ex: I am happy.)
                 </p>
-                <input type="text" id="s3d5q2" data-answer="friend" class="input-full"><div class="feedback-message" id="s3d5-feedback2"></div>
-            </li>
-            <li>
-                <p class="prompt">3. Ouça o código e escreva a palavra: 
-                    <button class="audio-btn" style="background:var(--c-blue); color:white;" data-audio-src="../assets/audio/s3d5_yellow.mp3">🔊</button>
+                <input type="text" placeholder="I am..." class="input-full" />
+              </li>
+              <li>
+                <p class="prompt">4. What is something you need to do today?</p>
+                <input
+                  type="text"
+                  placeholder="I need to..."
+                  class="input-full"
+                />
+              </li>
+              <li>
+                <p class="prompt">
+                  5. What is a good eco-friendly tip? (Ex: Recycle paper.)
                 </p>
-                <input type="text" id="s3d5q3" data-answer="yellow" class="input-full"><div class="feedback-message" id="s3d5-feedback3"></div>
-            </li>
-            <li>
-                <p class="prompt">4. Ouça o código e escreva a palavra: 
-                    <button class="audio-btn" style="background:var(--c-blue); color:white;" data-audio-src="../assets/audio/s3d5_answer.mp3">🔊</button>
-                </p>
-                <input type="text" id="s3d5q4" data-answer="answer" class="input-full"><div class="feedback-message" id="s3d5-feedback4"></div>
-            </li>
-            <li>
-                <p class="prompt">5. Ouça o código e escreva a palavra: 
-                    <button class="audio-btn" style="background:var(--c-blue); color:white;" data-audio-src="../assets/audio/s3d5_english.mp3">🔊</button>
-                </p>
-                <input type="text" id="s3d5q5" data-answer="english" class="input-full"><div class="feedback-message" id="s3d5-feedback5"></div>
-            </li>
-        </ul>
-        <button id="verify-s3d5" class="check-btn">Verificar</button>
-    </div>
-</section>
-            
-            <button id="complete-week-btn" data-week="3" class="check-btn">CONCLUIR MISSÃO DA SEMANA</button>
-        </main>
+                <input
+                  type="text"
+                  placeholder="Recycle..."
+                  class="input-full"
+                />
+              </li>
+            </ul>
+            <p
+              style="
+                margin-top: 1rem;
+                font-style: italic;
+                color: var(--c-text);
+                opacity: 0.8;
+              "
+            >
+              Esta atividade é de escrita livre. Use sua criatividade de
+              exploradora!
+            </p>
+          </div>
+        </section>
+
+        <button id="complete-week-btn" data-week="3" class="check-btn">
+          CONCLUIR MISSÃO DA SEMANA
+        </button>
+      </main>
     </div>
     <script src="../js/atividades.js"></script>
-</body>
+  </body>
 </html>
