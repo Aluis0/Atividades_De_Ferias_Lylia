@@ -173,67 +173,70 @@
 
         <!-- TREINO 3: QUAL É O HOBBY? -->
         <section class="mission-day">
-            <h2>Treino 3: Qual é o Hobby?</h2>
-            <div class="activity-box">
-                <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Encaixe a palavra certa para completar a frase! Clique na sua escolha para ver se acertou.</p>
-                <ul class="transform-activity">
-                    <!-- Questão 1 -->
-                    <li>
-                        <p class="prompt inline-item">Marianne can play the ___.</p>
-                        <div class="multiple-choice-options">
-                            <button class="choice-btn">game</button>
-                            <button class="choice-btn correct-answer">drums</button>
-                            <button class="choice-btn">piano</button>
-                        </div>
-                    </li>
-                    <!-- Questão 2 -->
-                    <li>
-                        <p class="prompt inline-item">My brother can play the ___.</p>
-                        <div class="multiple-choice-options">
-                            <button class="choice-btn correct-answer">piano</button>
-                            <button class="choice-btn">play</button>
-                            <button class="choice-btn">the drums</button>
-                        </div>
-                    </li>
-                    <!-- Questão 3 -->
-                    <li>
-                        <p class="prompt inline-item">I can ___ really well.</p>
-                        <div class="multiple-choice-options">
-                            <button class="choice-btn correct-answer">draw</button>
-                            <button class="choice-btn">drawing</button>
-                            <button class="choice-btn">colors</button>
-                        </div>
-                    </li>
-                    <!-- Questão 4 -->
-                    <li>
-                        <p class="prompt inline-item">She can't ___ my bike.</p>
-                        <div class="multiple-choice-options">
-                            <button class="choice-btn">understand</button>
-                            <button class="choice-btn">draw</button>
-                            <button class="choice-btn correct-answer">fix</button>
-                        </div>
-                    </li>
-                    <!-- Questão 5 -->
-                    <li>
-                        <p class="prompt inline-item">I love ___.</p>
-                        <div class="multiple-choice-options">
-                            <button class="choice-btn">play chess</button>
-                            <button class="choice-btn correct-answer">programming</button>
-                            <button class="choice-btn">basketball</button>
-                        </div>
-                    </li>
-                </ul>
-                <!-- Não precisamos mais do botão de verificar para esta atividade -->
-            </div>
+          <h2>Treino 3: Qual é o Hobby?</h2>
+          <div class="activity-box">
+            <p class="prompt" style="font-size: 1.1rem; line-height: 1.7">
+              Encaixe a palavra certa para completar a frase! Clique na sua
+              escolha para ver se acertou.
+            </p>
+            <ul class="transform-activity">
+              <!-- Questão 1 -->
+              <li>
+                <p class="prompt inline-item">Marianne can play the ___.</p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn">game</button>
+                  <button class="choice-btn correct-answer">drums</button>
+                  <button class="choice-btn">piano</button>
+                </div>
+              </li>
+              <!-- Questão 2 -->
+              <li>
+                <p class="prompt inline-item">My brother can play the ___.</p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn correct-answer">piano</button>
+                  <button class="choice-btn">play</button>
+                  <button class="choice-btn">the drums</button>
+                </div>
+              </li>
+              <!-- Questão 3 -->
+              <li>
+                <p class="prompt inline-item">I can ___ really well.</p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn correct-answer">draw</button>
+                  <button class="choice-btn">drawing</button>
+                  <button class="choice-btn">colors</button>
+                </div>
+              </li>
+              <!-- Questão 4 -->
+              <li>
+                <p class="prompt inline-item">She can't ___ my bike.</p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn">understand</button>
+                  <button class="choice-btn">draw</button>
+                  <button class="choice-btn correct-answer">fix</button>
+                </div>
+              </li>
+              <!-- Questão 5 -->
+              <li>
+                <p class="prompt inline-item">I love ___.</p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn">play chess</button>
+                  <button class="choice-btn correct-answer">programming</button>
+                  <button class="choice-btn">basketball</button>
+                </div>
+              </li>
+            </ul>
+            <!-- Não precisamos mais do botão de verificar para esta atividade -->
+          </div>
         </section>
 
-        <!-- TREINO 4: INTERPRETAÇÃO DE TEXTO -->
+        <!-- TREINO 4: CONHECENDO O AGENTE JOSH -->
         <section class="mission-day">
           <h2>Treino 4: Conhecendo o Agente Josh</h2>
           <div class="activity-box">
             <p class="prompt" style="font-size: 1.1rem; line-height: 1.7">
               Leia o dossiê secreto sobre o agente Josh e responda às perguntas
-              sobre os talentos e gostos dele.
+              abertas sobre ele. Use frases completas em inglês!
             </p>
             <div
               style="
@@ -250,61 +253,63 @@
                 speak Spanish. I can fix tablets and cell phones, too. I love
                 programming, but I can't stand studying German. And you? What
                 can you do?"
+                <button
+                  class="audio-btn"
+                  data-audio-src="../assets/audio/semana1_josh.mp3"
+                  title="Ouvir o texto do Josh"
+                  style="margin-left: 0.5rem"
+                >
+                  🔊
+                </button>
               </p>
             </div>
             <ul class="transform-activity">
               <li>
-                <p class="prompt">1. Can Josh play the piano?</p>
+                <p class="prompt">1. What talents does Josh have?</p>
                 <input
                   type="text"
-                  id="s4q1"
-                  data-answer="yes, he can"
+                  placeholder="Josh can..."
                   class="input-full"
                 />
-                <div class="feedback-message" id="s4-feedback1"></div>
               </li>
               <li>
-                <p class="prompt">2. Can he speak Spanish?</p>
+                <p class="prompt">2. What does Josh like and dislike?</p>
                 <input
                   type="text"
-                  id="s4q2"
-                  data-answer="no, he can't"
+                  placeholder="He likes... / He doesn't like..."
                   class="input-full"
                 />
-                <div class="feedback-message" id="s4-feedback2"></div>
               </li>
               <li>
-                <p class="prompt">3. What can he fix?</p>
+                <p class="prompt">3. What can't Josh do?</p>
                 <input
                   type="text"
-                  id="s4q3"
-                  data-answer="he can fix tablets and cell phones"
+                  placeholder="He can't..."
                   class="input-full"
                 />
-                <div class="feedback-message" id="s4-feedback3"></div>
               </li>
               <li>
-                <p class="prompt">4. Does he like programming?</p>
+                <p class="prompt">
+                  4. If you could meet Josh, what would you ask him?
+                </p>
                 <input
                   type="text"
-                  id="s4q4"
-                  data-answer="yes, he does"
+                  placeholder="I would ask..."
                   class="input-full"
                 />
-                <div class="feedback-message" id="s4-feedback4"></div>
               </li>
               <li>
-                <p class="prompt">5. What can't he stand studying?</p>
+                <p class="prompt">
+                  5. Do you have anything in common with Josh? Explain.
+                </p>
                 <input
                   type="text"
-                  id="s4q5"
-                  data-answer="he can't stand studying german"
+                  placeholder="Yes, I... / No, I don't..."
                   class="input-full"
                 />
-                <div class="feedback-message" id="s4-feedback5"></div>
               </li>
             </ul>
-            <button id="verify-s4" class="check-btn">Verificar</button>
+            <!-- Não precisa de botão de verificação para perguntas abertas -->
           </div>
         </section>
 

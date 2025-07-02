@@ -1,161 +1,372 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Semana 2: A Aventura do Fim de Semana!</title>
-    <link rel="stylesheet" href="../css/semanas.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/semanas.css" />
+  </head>
+  <body>
     <div class="container">
-        <a href="../index.html" class="back-button">← Voltar ao Mapa de Missões</a>
-        
-        <div class="weekly-briefing">
-            <h2>Missão: A Aventura do Fim de Semana! 🎉</h2>
-            <p>Olá, aventureira Lylia! O que está acontecendo <span class="en-word">now</span>? Nesta semana, vamos planejar atividades incríveis, falar sobre o que estamos fazendo e perguntar sobre os planos dos amigos. Prepare-se para organizar a diversão!
-            <button class="audio-btn" data-audio-src="../assets/audio/semana2_intro_geral.mp3">🔊</button></p>
-        </div>
+      <a href="../index.html" class="back-button"
+        >← Voltar ao Mapa de Missões</a
+      >
 
-        <main>
-            <!-- TREINO 1: PRESENT CONTINUOUS -->
-            <section class="mission-day">
-                <h2>Treino 1: O Que Está Acontecendo Agora?</h2>
-                <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Para falar de algo que está acontecendo AGORA, usamos a fórmula mágica: <strong>Pessoa + <span class="en-word">am/is/are</span> + Ação com <span class="en-word">-ing</span></strong>.</p>
-                    <p class="prompt">Missão: Complete as frases para descrever as ações em andamento!</p>
-                    <ul class="transform-activity">
-                        <li class="inline-item"><span>I'm</span> <input type="text" id="s2q1_1" data-answer="wearing" class="input-sm"> <span>a new T-shirt.</span></li>
-                        <li class="inline-item"><span>What</span> <input type="text" id="s2q1_2" data-answer="are" class="input-sm"> <span>you? (A resposta certa é 'wearing', mas as opções do livro focam no 'are')</span></li>
-                        <li class="inline-item"><span>She's not</span> <input type="text" id="s2q1_3" data-answer="buying" class="input-sm"> <span>the tickets for the concert now.</span></li>
-                        <li class="inline-item"><span>We're</span> <input type="text" id="s2q1_4" data-answer="organizing" class="input-sm"> <span>a party now.</span></li>
-                        <li class="inline-item"><span>Is he</span> <input type="text" id="s2q1_5" data-answer="waiting" class="input-sm"> <span>for you?</span></li>
-                    </ul>
-                    <button id="verify-s2t1" class="check-btn">Verificar</button>
-                </div>
-            </section>
+      <div class="weekly-briefing">
+        <h2>Missão: A Aventura do Fim de Semana! 🎉</h2>
+        <p>
+          Olá, aventureira Lylia! O que está acontecendo
+          <span class="en-word">now</span>? Nesta semana, vamos planejar
+          atividades incríveis, falar sobre o que estamos fazendo e perguntar
+          sobre os planos dos amigos. Prepare-se para organizar a diversão!
+          <button
+            class="audio-btn"
+            data-audio-src="../assets/audio/semana2_intro_geral.mp3"
+          >
+            🔊
+          </button>
+        </p>
+      </div>
 
-            <!-- TREINO 2: FAZENDO PERGUNTAS -->
-            <section class="mission-day">
-                <h2>Treino 2: O Kit do Repórter</h2>
-                <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Um bom repórter precisa das palavras certas para começar uma pergunta! Vamos praticar.</p>
-                    <p class="prompt">Missão: Escreva a frase completa da pergunta, usando a palavra inicial correta.</p>
-                    <ul class="transform-activity">
-                        <li><p class="prompt">1. (Para perguntar sobre frequência) ___ do you feed the birds?</p>
-                             <input type="text" id="s2q2_1" data-answer="how often do you feed the birds?" class="input-full"><div class="feedback-message" id="s2-feedback1"></div></li>
-                        <li><p class="prompt">2. (Para perguntar sobre o lugar) ___ do you want to go?</p>
-                            <input type="text" id="s2q2_2" data-answer="where do you want to go?" class="input-full"><div class="feedback-message" id="s2-feedback2"></div></li>
-                        <li><p class="prompt">3. (Para perguntar sobre preço) ___ is this T-shirt?</p>
-                            <input type="text" id="s2q2_3" data-answer="how much is this t-shirt?" class="input-full"><div class="feedback-message" id="s2-feedback3"></div></li>
-                        <li><p class="prompt">4. (Para perguntar o que você está vestindo) ___ are you wearing?</p>
-                            <input type="text" id="s2q2_4" data-answer="what are you wearing?" class="input-full"><div class="feedback-message" id="s2-feedback4"></div></li>
-                        <li><p class="prompt">5. (Para perguntar quando ficar em casa) ___ we stay indoors?</p>
-                            <input type="text" id="s2q2_5" data-answer="when we stay indoors?" class="input-full" data-alternative="when do we stay indoors?"><div class="feedback-message" id="s2-feedback5"></div></li>
-                    </ul>
-                     <button id="verify-s2t2" class="check-btn">Verificar</button>
-                </div>
-            </section>
+      <main>
+        <!-- TREINO 1: MATCH THE PHRASES -->
+        <section class="mission-day">
+          <h2>Treino 1: Ligue as Partes das Frases!</h2>
+          <div class="activity-box">
+            <p class="prompt" style="font-size: 1.1rem; line-height: 1.7">
+              Clique em uma frase da coluna da esquerda e depois na parte
+              correta da coluna da direita para formar frases completas sobre o
+              que está acontecendo agora!
+            </p>
+            <div id="match-exercise">
+              <ul id="match-left" style="list-style: none; padding: 0">
+                <li class="match-item left" data-match="1">I'm wearing</li>
+                <li class="match-item left" data-match="2">We are planning</li>
+                <li class="match-item left" data-match="3">She is buying</li>
+                <li class="match-item left" data-match="4">They are playing</li>
+                <li class="match-item left" data-match="5">Is he eating</li>
+              </ul>
+              <ul id="match-right" style="list-style: none; padding: 0">
+                <li class="match-item right" data-match="4">
+                  video games in the living room.
+                </li>
+                <li class="match-item right" data-match="1">
+                  a new blue T-shirt today.
+                </li>
+                <li class="match-item right" data-match="5">
+                  pizza for lunch?
+                </li>
+                <li class="match-item right" data-match="3">
+                  tickets for the concert now.
+                </li>
+                <li class="match-item right" data-match="2">
+                  a picnic for Saturday afternoon.
+                </li>
+              </ul>
+            </div>
+            <div
+              id="match-feedback"
+              style="margin-top: 1rem; font-weight: bold"
+            ></div>
+          </div>
+        </section>
 
-            <!-- TREINO 3: VOCABULÁRIO DE ATIVIDADES -->
-            <section class="mission-day">
-                <h2>Treino 3: Plano de Ação</h2>
-                <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Vamos escolher a ação correta para cada plano!</p>
-                    <p class="prompt">Missão: Encaixe a palavra certa para completar a frase.</p>
-                    <ul class="transform-activity">
-                        <li>
-                            <p class="prompt inline-item">We need to ___ the umbrella.</p>
-                            <div class="multiple-choice-options">
-                                <button class="choice-btn">stay</button>
-                                <button class="choice-btn correct-answer">get</button>
-                                <button class="choice-btn">to get</button>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="prompt inline-item">Can you ___ the dog, please?</p>
-                            <div class="multiple-choice-options">
-                                <button class="choice-btn correct-answer">walk</button>
-                                <button class="choice-btn">play</button>
-                                <button class="choice-btn">walks</button>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="prompt inline-item">I want to ___ for his autograph.</p>
-                            <div class="multiple-choice-options">
-                                <button class="choice-btn">to</button>
-                                <button class="choice-btn correct-answer">ask</button>
-                                <button class="choice-btn">for</button>
-                            </div>
-                        </li>
-                         <li>
-                            <p class="prompt inline-item">I don't want to eat ___.</p>
-                            <div class="multiple-choice-options">
-                                <button class="choice-btn">any</button>
-                                <button class="choice-btn">something</button>
-                                <button class="choice-btn correct-answer">anything</button>
-                            </div>
-                        </li>
-                        <li>
-                            <p class="prompt inline-item">Let's ___ next to the pizza place.</p>
-                            <div class="multiple-choice-options">
-                                <button class="choice-btn correct-answer">meet</button>
-                                <button class="choice-btn">meeting</button>
-                                <button class="choice-btn">to meet</button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+        <!-- TREINO 2: FAZENDO PERGUNTAS -->
+        <section class="mission-day">
+          <h2>Treino 2: O Kit do Repórter</h2>
+          <div class="activity-box">
+            <p class="prompt" style="font-size: 1.1rem; line-height: 1.7">
+              Um bom repórter precisa das palavras certas para começar uma
+              pergunta! Vamos praticar.
+            </p>
+            <p class="prompt">
+              Missão: Escreva a frase completa da pergunta, usando a palavra
+              inicial correta.
+            </p>
+            <ul class="transform-activity">
+              <li>
+                <p class="prompt">
+                  1. (Para perguntar sobre frequência) ___ do you feed the
+                  birds?
+                </p>
+                <input
+                  type="text"
+                  id="s2q2_1"
+                  data-answer="how often do you feed the birds?"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s2-feedback1"></div>
+              </li>
+              <li>
+                <p class="prompt">
+                  2. (Para perguntar sobre o lugar) ___ do you want to go?
+                </p>
+                <input
+                  type="text"
+                  id="s2q2_2"
+                  data-answer="where do you want to go?"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s2-feedback2"></div>
+              </li>
+              <li>
+                <p class="prompt">
+                  3. (Para perguntar sobre preço) ___ is this T-shirt?
+                </p>
+                <input
+                  type="text"
+                  id="s2q2_3"
+                  data-answer="how much is this t-shirt?"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s2-feedback3"></div>
+              </li>
+              <li>
+                <p class="prompt">
+                  4. (Para perguntar o que você está vestindo) ___ are you
+                  wearing?
+                </p>
+                <input
+                  type="text"
+                  id="s2q2_4"
+                  data-answer="what are you wearing?"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s2-feedback4"></div>
+              </li>
+              <li>
+                <p class="prompt">
+                  5. (Para perguntar quando ficar em casa) ___ do we stay
+                  indoors?
+                </p>
+                <input
+                  type="text"
+                  id="s2q2_5"
+                  data-answer="when we stay indoors?"
+                  class="input-full"
+                  data-alternative="when do we stay indoors?"
+                />
+                <div class="feedback-message" id="s2-feedback5"></div>
+              </li>
+            </ul>
+            <button id="verify-s2t2" class="check-btn">Verificar</button>
+          </div>
+        </section>
 
-             <!-- TREINO 4: INTERPRETAÇÃO DE TEXTO -->
-            <section class="mission-day">
-                <h2>Treino 4: O Mundo de Amanda</h2>
-                <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Leia o perfil da Amanda e descubra os planos e gostos dela.</p>
-                    <div style="background: #f0f4f8; padding: 1rem; border-radius: 12px; margin: 1.5rem 0;">
-                        <h4 style="margin-bottom: 0.5rem;">Perfil: Amanda</h4>
-                        <p style="font-style: italic; color: var(--c-text);">"Hey! My name is Amanda. I love to buy clothes! Do you like what I'm wearing? Blue jeans and a blue T-shirt is my favorite outfit. I also love to go out and hang out with my friends. We want to go to the amusement park on Saturday. I need to buy the tickets today. What about you? What are you wearing?"</p>
-                    </div>
-                    <ul class="transform-activity">
-                        <li><p class="prompt">1. What does Amanda love to do?</p>
-                            <input type="text" id="s2q4_1" data-answer="she loves to buy clothes" class="input-full"><div class="feedback-message" id="s2-feedback4-1"></div></li>
-                        <li><p class="prompt">2. What is her favorite outfit?</p>
-                            <input type="text" id="s2q4_2" data-answer="her favorite outfit is blue jeans and a blue t-shirt" class="input-full"><div class="feedback-message" id="s2-feedback4-2"></div></li>
-                        <li><p class="prompt">3. Where do they want to go on Saturday?</p>
-                            <input type="text" id="s2q4_3" data-answer="they want to go to the amusement park" class="input-full"><div class="feedback-message" id="s2-feedback4-3"></div></li>
-                        <li><p class="prompt">4. What does she need to buy today?</p>
-                            <input type="text" id="s2q4_4" data-answer="she needs to buy the tickets" class="input-full"><div class="feedback-message" id="s2-feedback4-4"></div></li>
-                         <li><p class="prompt">5. Who does she love to hang out with?</p>
-                            <input type="text" id="s2q4_5" data-answer="she loves to hang out with her friends" class="input-full"><div class="feedback-message" id="s2-feedback4-5"></div></li>
-                    </ul>
-                    <button id="verify-s2t4" class="check-btn">Verificar</button>
+        <!-- TREINO 3: VOCABULÁRIO DE ATIVIDADES -->
+        <section class="mission-day">
+          <h2>Treino 3: Plano de Ação</h2>
+          <div class="activity-box">
+            <p class="prompt" style="font-size: 1.1rem; line-height: 1.7">
+              Vamos escolher a ação correta para cada plano!
+            </p>
+            <p class="prompt">
+              Missão: Encaixe a palavra certa para completar a frase.
+            </p>
+            <ul class="transform-activity">
+              <li>
+                <p class="prompt inline-item">We need to ___ the umbrella.</p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn">stay</button>
+                  <button class="choice-btn correct-answer">get</button>
+                  <button class="choice-btn">to get</button>
                 </div>
-            </section>
+              </li>
+              <li>
+                <p class="prompt inline-item">Can you ___ the dog, please?</p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn correct-answer">walk</button>
+                  <button class="choice-btn">play</button>
+                  <button class="choice-btn">walks</button>
+                </div>
+              </li>
+              <li>
+                <p class="prompt inline-item">
+                  I want to ___ for his autograph.
+                </p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn">to</button>
+                  <button class="choice-btn correct-answer">ask</button>
+                  <button class="choice-btn">for</button>
+                </div>
+              </li>
+              <li>
+                <p class="prompt inline-item">I don't want to eat ___.</p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn">any</button>
+                  <button class="choice-btn">something</button>
+                  <button class="choice-btn correct-answer">anything</button>
+                </div>
+              </li>
+              <li>
+                <p class="prompt inline-item">
+                  Let's ___ next to the pizza place.
+                </p>
+                <div class="multiple-choice-options">
+                  <button class="choice-btn correct-answer">meet</button>
+                  <button class="choice-btn">meeting</button>
+                  <button class="choice-btn">to meet</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-            <!-- TREINO 5: MINHA VEZ! -->
-            <section class="mission-day">
-                <h2>Treino 5: Meus Planos para o Fim de Semana!</h2>
-                <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Agora é com você, Lylia! Responda às perguntas sobre seus próprios hobbies e planos.</p>
-                    <ul class="transform-activity">
-                         <li><p class="prompt">1. What are you wearing now?</p>
-                             <input type="text" placeholder="I'm wearing..." class="input-full"></li>
-                         <li><p class="prompt">2. What do you do when you stay at home?</p>
-                             <input type="text" placeholder="I..." class="input-full"></li>
-                         <li><p class="prompt">3. Do you collect anything? (stickers, buttons, etc.)</p>
-                             <input type="text" placeholder="Yes, I do. I collect... / No, I don't." class="input-full"></li>
-                         <li><p class="prompt">4. How often do you go out with your friends?</p>
-                             <input type="text" placeholder="I always/usually/hardly ever..." class="input-full"></li>
-                         <li><p class="prompt">5. Where do you want to go next weekend?</p>
-                             <input type="text" placeholder="I want to go to..." class="input-full"></li>
-                    </ul>
-                    <p style="margin-top: 1rem; font-style: italic; color: var(--c-text); opacity: 0.8;">Esta atividade é de escrita livre. Conte seus planos!</p>
-                </div>
-            </section>
-            
-            <button id="complete-week-btn" data-week="2" class="check-btn">CONCLUIR MISSÃO DA SEMANA</button>
-        </main>
+        <!-- TREINO 4: INTERPRETAÇÃO DE TEXTO -->
+        <section class="mission-day">
+          <h2>Treino 4: O Mundo de Amanda</h2>
+          <div class="activity-box">
+            <p class="prompt" style="font-size: 1.1rem; line-height: 1.7">
+              Leia o perfil da Amanda e descubra os planos e gostos dela.
+            </p>
+            <div
+              style="
+                background: #f0f4f8;
+                padding: 1rem;
+                border-radius: 12px;
+                margin: 1.5rem 0;
+              "
+            >
+              <h4 style="margin-bottom: 0.5rem">Perfil: Amanda</h4>
+              <p style="font-style: italic; color: var(--c-text)">
+                "Hey! My name is Amanda. I love to buy clothes! Do you like what
+                I'm wearing? Blue jeans and a blue T-shirt is my favorite
+                outfit. I also love to go out and hang out with my friends. We
+                want to go to the amusement park on Saturday. I need to buy the
+                tickets today. What about you? What are you wearing?"
+                <button
+                  class="audio-btn"
+                  data-audio-src="../assets/audio/semana2_amanda.mp3"
+                  title="Ouvir o texto da Amanda"
+                  style="margin-left: 0.5rem"
+                >
+                  🔊
+                </button>
+              </p>
+            </div>
+            <ul class="transform-activity">
+              <li>
+                <p class="prompt">1. What does Amanda love to do?</p>
+                <input
+                  type="text"
+                  id="s2q4_1"
+                  data-answer="she loves to buy clothes"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s2-feedback4-1"></div>
+              </li>
+              <li>
+                <p class="prompt">2. What is her favorite outfit?</p>
+                <input
+                  type="text"
+                  id="s2q4_2"
+                  data-answer="her favorite outfit is blue jeans and a blue t-shirt"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s2-feedback4-2"></div>
+              </li>
+              <li>
+                <p class="prompt">3. Where do they want to go on Saturday?</p>
+                <input
+                  type="text"
+                  id="s2q4_3"
+                  data-answer="they want to go to the amusement park"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s2-feedback4-3"></div>
+              </li>
+              <li>
+                <p class="prompt">4. What does she need to buy today?</p>
+                <input
+                  type="text"
+                  id="s2q4_4"
+                  data-answer="she needs to buy the tickets"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s2-feedback4-4"></div>
+              </li>
+              <li>
+                <p class="prompt">5. Who does she love to hang out with?</p>
+                <input
+                  type="text"
+                  id="s2q4_5"
+                  data-answer="she loves to hang out with her friends"
+                  class="input-full"
+                />
+                <div class="feedback-message" id="s2-feedback4-5"></div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- TREINO 5: MINHA VEZ! -->
+        <section class="mission-day">
+          <h2>Treino 5: Meus Planos para o Fim de Semana!</h2>
+          <div class="activity-box">
+            <p class="prompt" style="font-size: 1.1rem; line-height: 1.7">
+              Agora é com você, Lylia! Responda às perguntas sobre seus próprios
+              hobbies e planos.
+            </p>
+            <ul class="transform-activity">
+              <li>
+                <p class="prompt">1. What are you wearing now?</p>
+                <input
+                  type="text"
+                  placeholder="I'm wearing..."
+                  class="input-full"
+                />
+              </li>
+              <li>
+                <p class="prompt">2. What do you do when you stay at home?</p>
+                <input type="text" placeholder="I..." class="input-full" />
+              </li>
+              <li>
+                <p class="prompt">
+                  3. Do you collect anything? (stickers, buttons, etc.)
+                </p>
+                <input
+                  type="text"
+                  placeholder="Yes, I do. I collect... / No, I don't."
+                  class="input-full"
+                />
+              </li>
+              <li>
+                <p class="prompt">
+                  4. How often do you go out with your friends?
+                </p>
+                <input
+                  type="text"
+                  placeholder="I always/usually/hardly ever..."
+                  class="input-full"
+                />
+              </li>
+              <li>
+                <p class="prompt">5. Where do you want to go next weekend?</p>
+                <input
+                  type="text"
+                  placeholder="I want to go to..."
+                  class="input-full"
+                />
+              </li>
+            </ul>
+            <p
+              style="
+                margin-top: 1rem;
+                font-style: italic;
+                color: var(--c-text);
+                opacity: 0.8;
+              "
+            >
+              Esta atividade é de escrita livre. Conte seus planos!
+            </p>
+          </div>
+        </section>
+
+        <button id="complete-week-btn" data-week="2" class="check-btn">
+          CONCLUIR MISSÃO DA SEMANA
+        </button>
+      </main>
     </div>
     <script src="../js/atividades.js"></script>
-</body>
+  </body>
 </html>

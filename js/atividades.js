@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   // --- FUNÇÃO 1: VERIFICAÇÃO PADRÃO (PARA INPUTS SIMPLES) ---
-  const setupVerification = (buttonId, questionPrefix, feedbackPrefix, totalQuestions) => {
+  const setupVerification = (
+    buttonId,
+    questionPrefix,
+    feedbackPrefix,
+    totalQuestions
+  ) => {
     const verifyButton = document.getElementById(buttonId);
     if (!verifyButton) return;
 
@@ -10,18 +14,28 @@ document.addEventListener("DOMContentLoaded", () => {
       for (let i = 1; i <= totalQuestions; i++) {
         const inputElement = document.getElementById(`${questionPrefix}${i}`);
         if (!inputElement) continue;
-        
-        const feedbackElementId = feedbackPrefix ? `${feedbackPrefix}${i}` : null;
-        const feedbackElement = feedbackElementId ? document.getElementById(feedbackElementId) : null;
 
-        const userAnswer = inputElement.value.trim().toLowerCase().replace(/\s+/g, " ");
+        const feedbackElementId = feedbackPrefix
+          ? `${feedbackPrefix}${i}`
+          : null;
+        const feedbackElement = feedbackElementId
+          ? document.getElementById(feedbackElementId)
+          : null;
+
+        const userAnswer = inputElement.value
+          .trim()
+          .toLowerCase()
+          .replace(/\s+/g, " ");
         const correctAnswer = inputElement.dataset.answer;
         const alternativeAnswer = inputElement.dataset.alternative; // Para respostas alternativas
 
         inputElement.classList.remove("correct", "incorrect");
         if (feedbackElement) feedbackElement.style.display = "none";
 
-        if (userAnswer === correctAnswer || (alternativeAnswer && userAnswer === alternativeAnswer)) {
+        if (
+          userAnswer === correctAnswer ||
+          (alternativeAnswer && userAnswer === alternativeAnswer)
+        ) {
           inputElement.classList.add("correct");
         } else {
           allCorrect = false;
@@ -34,35 +48,94 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
       if (allCorrect) {
-        alert("Incrível! Todas as respostas estão corretas! Você é um mestre! ✨");
+        alert(
+          "Incrível! Todas as respostas estão corretas! Você é um mestre! ✨"
+        );
       }
     });
   };
 
   // --- FUNÇÃO 2: MÚLTIPLA ESCOLHA (PARA BOTÕES) ---
   const setupMultipleChoice = () => {
-    const optionContainers = document.querySelectorAll(".multiple-choice-options");
-    optionContainers.forEach(container => {
+    const optionContainers = document.querySelectorAll(
+      ".multiple-choice-options"
+    );
+    optionContainers.forEach((container) => {
       const buttons = container.querySelectorAll(".choice-btn");
-      let answered = false;
-      buttons.forEach(button => {
+      buttons.forEach((button) => {
         button.addEventListener("click", () => {
-          if (answered) return;
-          answered = true;
-          buttons.forEach(btn => btn.disabled = true);
+          // Se já foi respondido corretamente, não faz nada
+          if (container.querySelector(".choice-btn.correct")) return;
+
           if (button.classList.contains("correct-answer")) {
             button.classList.add("correct");
+            // Desabilita todos após acertar
+            buttons.forEach((btn) => (btn.disabled = true));
           } else {
             button.classList.add("incorrect");
-            container.querySelector(".correct-answer").classList.add("correct");
+            button.disabled = true; // Só desabilita o botão errado
           }
         });
       });
     });
   };
-  
+
+  // Treino 1 Semana 2 - Match the Phrases
+  function setupMatchExercise() {
+    const leftItems = document.querySelectorAll("#match-left .match-item.left");
+    const rightItems = document.querySelectorAll(
+      "#match-right .match-item.right"
+    );
+    let selectedLeft = null;
+    let selectedRight = null;
+    let matches = 0;
+
+    leftItems.forEach((item) => {
+      item.addEventListener("click", function () {
+        leftItems.forEach((i) => i.classList.remove("selected"));
+        this.classList.add("selected");
+        selectedLeft = this;
+        checkMatch();
+      });
+    });
+    rightItems.forEach((item) => {
+      item.addEventListener("click", function () {
+        rightItems.forEach((i) => i.classList.remove("selected"));
+        this.classList.add("selected");
+        selectedRight = this;
+        checkMatch();
+      });
+    });
+
+    function checkMatch() {
+      if (selectedLeft && selectedRight) {
+        const feedback = document.getElementById("match-feedback");
+        if (selectedLeft.dataset.match === selectedRight.dataset.match) {
+          selectedLeft.classList.add("matched");
+          selectedRight.classList.add("matched");
+          selectedLeft.style.pointerEvents = "none";
+          selectedRight.style.pointerEvents = "none";
+          matches++;
+          feedback.textContent = "Ótimo! Você fez uma ligação correta!";
+        } else {
+          feedback.textContent = "Tente novamente!";
+        }
+        setTimeout(() => {
+          leftItems.forEach((i) => i.classList.remove("selected"));
+          rightItems.forEach((i) => i.classList.remove("selected"));
+          feedback.textContent = "";
+          selectedLeft = null;
+          selectedRight = null;
+        }, 1000);
+        if (matches === 5) {
+          feedback.textContent = "Parabéns! Você completou todas as ligações!";
+        }
+      }
+    }
+  }
+
   // --- INICIALIZAÇÃO DE TODAS AS FUNCIONALIDADES ---
-  
+
   // Ativa a múltipla escolha em qualquer página que a tiver
   setupMultipleChoice();
 
@@ -117,4 +190,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  setupMatchExercise();
 });

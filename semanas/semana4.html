@@ -17,18 +17,71 @@
         </div>
 
         <main>
-            <!-- TREINO 1: PRONOMES OBJETO -->
+            <!-- TREINO 1: PRONOMES OBJETO - ATIVIDADE DE TRADUÇÃO -->
             <section class="mission-day">
-                <h2>Treino 1: Para Quem é a Mensagem?</h2>
+                <h2>Treino 1: Traduzindo Pronomes Objeto!</h2>
                 <div class="activity-box">
-                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">Quando a ação é para alguém, usamos os pronomes objeto! Ex: `talk to me`, `help him`, `helps us`.</p>
-                    <p class="prompt">Missão: Complete as frases com o pronome objeto correto!</p>
+                    <p class="prompt" style="font-size: 1.1rem; line-height: 1.7;">
+                        <strong>Vamos aprender os pronomes objeto em inglês!</strong><br>
+                        Eles são palavrinhas que usamos quando alguém faz algo PARA outra pessoa.<br><br>
+
+                        <strong>Pense assim:</strong><br>
+                        Eles são usados quando EU, ELE, ELA, NÓS ou ELES estão RECEBENDO a ação.<br><br>
+
+                        <ul style="margin: 0.5rem 0 0.5rem 1.2rem;">
+                            <li><strong>me</strong> = eu (quando recebo a ação)<br>
+                            Ex: She loves <strong>me</strong>. = Ela ama <strong>eu</strong> (me ama).</li>
+                            <li><strong>you</strong> = você<br>
+                            Ex: I see <strong>you</strong>. = Eu vejo <strong>você</strong>.</li>
+                            <li><strong>him</strong> = ele<br>
+                            Ex: I called <strong>him</strong>. = Eu liguei para <strong>ele</strong>.</li>
+                            <li><strong>her</strong> = ela<br>
+                            Ex: He helps <strong>her</strong>. = Ele ajuda <strong>ela</strong>.</li>
+                            <li><strong>it</strong> = ele/ela (para coisas ou animais)<br>
+                            Ex: I found <strong>it</strong>. = Eu encontrei <strong>ele/ela/isso</strong>.</li>
+                            <li><strong>us</strong> = nós<br>
+                            Ex: They hear <strong>us</strong>. = Eles ouvem <strong>nós</strong> (a gente).</li>
+                            <li><strong>them</strong> = eles/elas<br>
+                            Ex: We know <strong>them</strong>. = Nós conhecemos <strong>eles/elas</strong>.</li>
+                        </ul>
+
+                        <br>
+                        <strong>Dica:</strong> sempre pense: "Quem está recebendo a ação?"<br>
+                        Exemplo rápido: “Give <strong>me</strong> the ball” = Me dá a bola.<br>
+                        Aqui, EU estou recebendo a bola, então uso “me”.<br><br>
+
+                        <strong>Missão:</strong> Traduza as frases abaixo para o inglês, usando o pronome objeto certo!
+                        <button
+                          class="audio-btn"
+                          data-audio-src="../assets/audio/semana4_treino1_objetos.mp3"
+                          title="Ouvir explicação do treino 1"
+                          style="margin-left: 0.5rem"
+                        >
+                          🔊
+                        </button>
+                    </p>
+
                     <ul class="transform-activity">
-                        <li class="inline-item"><span>The principal always helps the students. She is very friendly to</span> <input type="text" id="s4q1_1" data-answer="them" class="input-sm">.</li>
-                        <li class="inline-item"><span>We are in the principal's office. She wants to talk to</span> <input type="text" id="s4q1_2" data-answer="us" class="input-sm">.</li>
-                        <li class="inline-item"><span>Is there anybody to help</span> <input type="text" id="s4q1_3" data-answer="him" class="input-sm">? (Samuel)</li>
-                        <li class="inline-item"><span>Can you help</span> <input type="text" id="s4q1_4" data-answer="me" class="input-sm">, please?</li>
-                        <li class="inline-item"><span>I like Bruna. I want to talk to</span> <input type="text" id="s4q1_5" data-answer="her" class="input-sm">.</li>
+                        <li class="inline-item">
+                            <span>Ela me ajuda.</span>
+                            <input type="text" id="s4q1_1" data-answer="she helps me" class="input-full" placeholder="Traduza aqui">
+                        </li>
+                        <li class="inline-item">
+                            <span>Eu quero falar com ela.</span>
+                            <input type="text" id="s4q1_2" data-answer="i want to talk to her" class="input-full" placeholder="Traduza aqui">
+                        </li>
+                        <li class="inline-item">
+                            <span>Ajude a gente!</span>
+                            <input type="text" id="s4q1_3" data-answer="help us" class="input-full" placeholder="Traduza aqui">
+                        </li>
+                        <li class="inline-item">
+                            <span>Você pode me ver?</span>
+                            <input type="text" id="s4q1_4" data-answer="can you see me" class="input-full" placeholder="Traduza aqui">
+                        </li>
+                        <li class="inline-item">
+                            <span>Ouça eles.</span>
+                            <input type="text" id="s4q1_5" data-answer="listen to them" class="input-full" placeholder="Traduza aqui">
+                        </li>
                     </ul>
                     <button id="verify-s4t1" class="check-btn">Verificar</button>
                 </div>
@@ -97,16 +150,61 @@
                         <p style="font-style: italic; color: var(--c-text);">"Hi, I'm Bruna and I'm a student. My classes start at 7:00 a.m., and I have recess at 10:00. In the afternoon, I have chemistry and biology lab class. There is a good cafeteria in my school, so I can have lunch there. My school isn't very big. There aren't many classrooms, but there is a sports field and accessible restrooms for students with disabilities."</p>
                     </div>
                     <ul class="transform-activity">
-                        <li><p class="prompt">1. What time do her classes start?</p>
-                            <input type="text" id="s4q4_1" data-answer="they start at 7:00 a.m." class="input-full"><div class="feedback-message" id="s4t4-feedback1"></div></li>
-                        <li><p class="prompt">2. What class does she have in the afternoon?</p>
-                            <input type="text" id="s4q4_2" data-answer="she has chemistry and biology lab class" class="input-full"><div class="feedback-message" id="s4t4-feedback2"></div></li>
-                        <li><p class="prompt">3. Where can she have lunch?</p>
-                            <input type="text" id="s4q4_3" data-answer="she can have lunch in the cafeteria" class="input-full"><div class="feedback-message" id="s4t4-feedback3"></div></li>
-                        <li><p class="prompt">4. Is her school very big?</p>
-                            <input type="text" id="s4q4_4" data-answer="no, it isn't" class="input-full"><div class="feedback-message" id="s4t4-feedback4"></div></li>
-                         <li><p class="prompt">5. What is there for students with disabilities?</p>
-                            <input type="text" id="s4q4_5" data-answer="there are accessible restrooms" class="input-full"><div class="feedback-message" id="s4t4-feedback5"></div></li>
+                        <li>
+                            <p class="prompt">1. What time do her classes start?</p>
+                            <input
+                                type="text"
+                                id="s4q4_1"
+                                data-answer="her classes start at 7:00 a.m."
+                                data-alternatives="classes start at 7:00 a.m.;at 7:00 a.m."
+                                class="input-full"
+                            >
+                            <div class="feedback-message" id="s4t4-feedback1"></div>
+                        </li>
+                        <li>
+                            <p class="prompt">2. What class does she have in the afternoon?</p>
+                            <input
+                                type="text"
+                                id="s4q4_2"
+                                data-answer="she has chemistry and biology lab class"
+                                data-alternatives="chemistry and biology lab class;she has lab class in the afternoon"
+                                class="input-full"
+                            >
+                            <div class="feedback-message" id="s4t4-feedback2"></div>
+                        </li>
+                        <li>
+                            <p class="prompt">3. Where can she have lunch?</p>
+                            <input
+                                type="text"
+                                id="s4q4_3"
+                                data-answer="she can have lunch in the cafeteria"
+                                data-alternatives="in the cafeteria;she has lunch in the cafeteria"
+                                class="input-full"
+                            >
+                            <div class="feedback-message" id="s4t4-feedback3"></div>
+                        </li>
+                        <li>
+                            <p class="prompt">4. Is her school very big?</p>
+                            <input
+                                type="text"
+                                id="s4q4_4"
+                                data-answer="no, it isn't"
+                                data-alternatives="no;no her school is not very big"
+                                class="input-full"
+                            >
+                            <div class="feedback-message" id="s4t4-feedback4"></div>
+                        </li>
+                        <li>
+                            <p class="prompt">5. What is there for students with disabilities?</p>
+                            <input
+                                type="text"
+                                id="s4q4_5"
+                                data-answer="there are accessible restrooms"
+                                data-alternatives="accessible restrooms;there are restrooms for students with disabilities"
+                                class="input-full"
+                            >
+                            <div class="feedback-message" id="s4t4-feedback5"></div>
+                        </li>
                     </ul>
                     <button id="verify-s4t4" class="check-btn">Verificar</button>
                 </div>
